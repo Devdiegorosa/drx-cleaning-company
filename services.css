@@ -1,0 +1,332 @@
+/* ============================================================
+       ESTILOS EXCLUSIVOS DA PÁGINA SERVICES
+       Todos os componentes base já estão no style.css principal
+    ============================================================ */
+
+    /* ── HERO DA PÁGINA DE SERVIÇOS ── */
+    #services-hero {
+      background:
+        radial-gradient(ellipse 70% 50% at 60% 50%, rgba(58,110,168,0.2) 0%, transparent 65%),
+        linear-gradient(160deg, var(--drx-navy) 0%, #152238 55%, #0d2440 100%);
+      padding: 9rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #services-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0px, transparent 18px,
+        rgba(255,255,255,0.018) 18px, rgba(255,255,255,0.018) 19px
+      );
+      pointer-events: none;
+    }
+    .page-hero-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 800;
+      line-height: 0.95;
+      color: #fff;
+      letter-spacing: 0.01em;
+    }
+    .page-hero-title .accent { color: var(--drx-silver); }
+
+    /* ── BREADCRUMB ── */
+    .drx-breadcrumb { margin-bottom: 1.6rem; }
+    .drx-breadcrumb .breadcrumb-item a {
+      color: var(--drx-silver);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .drx-breadcrumb .breadcrumb-item a:hover { color: #fff; }
+    .drx-breadcrumb .breadcrumb-item.active {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.8rem;
+    }
+    .drx-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+      color: rgba(255,255,255,0.25);
+      content: "›";
+    }
+
+    /* ── CARDS DE SERVIÇO (expandido) ── */
+    .service-card-full {
+      background: #fff;
+      border: 1px solid rgba(13,27,46,0.07);
+      border-radius: 14px;
+      overflow: hidden;
+      height: 100%;
+      transition: var(--transition);
+      position: relative;
+    }
+    .service-card-full::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--drx-steel), var(--drx-blue));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.38s ease;
+    }
+    .service-card-full:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--drx-shadow);
+      border-color: rgba(58,110,168,0.2);
+    }
+    .service-card-full:hover::before { transform: scaleX(1); }
+    .sc-img-wrap {
+      height: 200px;
+      overflow: hidden;
+      background: var(--drx-light);
+      position: relative;
+    }
+    .sc-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .service-card-full:hover .sc-img-wrap img { transform: scale(1.06); }
+    .sc-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(13,27,46,0.5) 100%);
+    }
+    .sc-badge {
+      position: absolute; top: 12px; left: 12px;
+      background: rgba(13,27,46,0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(143,168,192,0.3);
+      color: var(--drx-silver);
+      font-size: 0.65rem; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.25rem 0.7rem; border-radius: 50px;
+    }
+    .sc-icon-wrap {
+      position: absolute; bottom: 12px; right: 12px;
+      width: 42px; height: 42px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--drx-steel), var(--drx-blue));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; color: #fff;
+      box-shadow: 0 4px 14px rgba(13,27,46,0.3);
+    }
+    .sc-body { padding: 1.6rem 1.8rem 2rem; }
+    .sc-body h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.45rem; font-weight: 700;
+      color: var(--drx-navy); margin-bottom: 0.6rem;
+    }
+    .sc-body p { font-size: 0.88rem; color: #5a6a7e; line-height: 1.75; margin-bottom: 1.2rem; }
+    .sc-features {
+      list-style: none; padding: 0; margin: 0 0 1.4rem;
+      display: flex; flex-direction: column; gap: 0.4rem;
+    }
+    .sc-features li {
+      display: flex; align-items: center; gap: 0.55rem;
+      font-size: 0.82rem; color: var(--drx-navy); font-weight: 400;
+    }
+    .sc-features li i { color: var(--drx-blue); font-size: 0.75rem; flex-shrink: 0; }
+    .sc-cta {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--drx-blue);
+      text-decoration: none; transition: gap 0.2s;
+    }
+    .sc-cta:hover { gap: 0.75rem; color: var(--drx-steel); }
+
+    /* ── SEÇÃO DE PROCESSO ── */
+    #how-it-works { background: #f0f5fa; }
+    .step-connector {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .step-connector {
+        display: block;
+        position: absolute;
+        top: 28px; right: -50%;
+        width: 100%; height: 1px;
+        background: linear-gradient(90deg, rgba(58,110,168,0.4), transparent);
+        z-index: 0;
+      }
+    }
+    .step-num-wrap {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #fff;
+      border: 2px solid rgba(58,110,168,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem; font-weight: 800;
+      color: var(--drx-blue);
+      margin: 0 auto 1rem;
+      transition: var(--transition);
+      position: relative; z-index: 1;
+    }
+    .step-item:hover .step-num-wrap {
+      background: var(--drx-blue); color: #fff;
+      border-color: var(--drx-blue);
+      box-shadow: 0 6px 20px rgba(58,110,168,0.35);
+    }
+    .step-item h5 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;
+    }
+    .step-item p { font-size: 0.83rem; color: #5a6a7e; line-height: 1.65; }
+
+    /* ── SEÇÃO DE PREÇOS ── */
+    #pricing { background: var(--drx-white); }
+    .price-card {
+      background: #fff;
+      border: 1px solid rgba(13,27,46,0.08);
+      border-radius: 16px;
+      padding: 2.4rem 2rem;
+      height: 100%;
+      transition: var(--transition);
+      position: relative; overflow: hidden;
+      text-align: center;
+    }
+    .price-card.featured {
+      background: linear-gradient(160deg, var(--drx-navy), var(--drx-deep));
+      border-color: rgba(143,168,192,0.2);
+    }
+    .price-card.featured::before {
+      content: 'Most Popular';
+      position: absolute; top: 16px; right: -28px;
+      background: var(--drx-blue);
+      color: #fff; font-size: 0.65rem; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.25rem 2rem; transform: rotate(45deg);
+    }
+    .price-card:not(.featured):hover {
+      transform: translateY(-6px);
+      box-shadow: var(--drx-shadow);
+    }
+    .price-icon {
+      width: 64px; height: 64px; border-radius: 16px;
+      margin: 0 auto 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+    }
+    .price-card:not(.featured) .price-icon {
+      background: var(--drx-light); color: var(--drx-steel);
+    }
+    .price-card.featured .price-icon {
+      background: rgba(58,110,168,0.25); color: var(--drx-silver);
+    }
+    .price-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem;
+    }
+    .price-card:not(.featured) .price-name { color: var(--drx-navy); }
+    .price-card.featured .price-name { color: #fff; }
+    .price-desc { font-size: 0.83rem; margin-bottom: 1.4rem; }
+    .price-card:not(.featured) .price-desc { color: #6b7a8d; }
+    .price-card.featured .price-desc { color: rgba(255,255,255,0.55); }
+    .price-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.8rem; font-weight: 800; line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .price-card:not(.featured) .price-tag { color: var(--drx-navy); }
+    .price-card.featured .price-tag { color: #fff; }
+    .price-tag sup { font-size: 1.2rem; vertical-align: super; }
+    .price-from { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.4rem; }
+    .price-card:not(.featured) .price-from { color: #9aabba; }
+    .price-card.featured .price-from { color: rgba(255,255,255,0.4); }
+    .price-list {
+      list-style: none; padding: 0; margin: 0 0 1.8rem;
+      text-align: left;
+    }
+    .price-list li {
+      display: flex; align-items: center; gap: 0.55rem;
+      font-size: 0.83rem; padding: 0.35rem 0;
+      border-bottom: 1px solid;
+    }
+    .price-card:not(.featured) .price-list li {
+      color: var(--drx-navy); border-color: rgba(13,27,46,0.06);
+    }
+    .price-card.featured .price-list li {
+      color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.06);
+    }
+    .price-list li:last-child { border-bottom: none; }
+    .price-list li i { flex-shrink: 0; }
+    .price-card:not(.featured) .price-list li i { color: var(--drx-blue); }
+    .price-card.featured .price-list li i { color: var(--drx-silver); }
+    .btn-price {
+      display: block; width: 100%;
+      padding: 0.85rem; border-radius: 50px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.92rem; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none; text-align: center;
+      transition: var(--transition);
+    }
+    .btn-price-outline {
+      border: 1.5px solid rgba(58,110,168,0.35);
+      color: var(--drx-blue); background: transparent;
+    }
+    .btn-price-outline:hover {
+      background: var(--drx-blue); color: #fff;
+      border-color: var(--drx-blue);
+    }
+    .btn-price-solid {
+      background: linear-gradient(135deg, var(--drx-steel), var(--drx-blue));
+      color: #fff; border: none;
+      box-shadow: 0 6px 22px rgba(58,110,168,0.4);
+    }
+    .btn-price-solid:hover {
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(58,110,168,0.55);
+    }
+
+    /* ── FAQ ── */
+    #faq { background: #f0f5fa; }
+    .drx-accordion .accordion-item {
+      border: 1px solid rgba(13,27,46,0.08);
+      border-radius: 10px !important;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    .drx-accordion .accordion-button {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--drx-navy);
+      background: #fff;
+      padding: 1.2rem 1.4rem;
+      box-shadow: none !important;
+    }
+    .drx-accordion .accordion-button:not(.collapsed) {
+      color: var(--drx-blue);
+      background: #fff;
+    }
+    .drx-accordion .accordion-button::after {
+      filter: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233a6ea8'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+    .drx-accordion .accordion-body {
+      font-size: 0.9rem; color: #5a6a7e; line-height: 1.8;
+      background: #fff; padding: 0 1.4rem 1.4rem;
+    }
+
+    /* ── AREAS ATENDIDAS ── */
+    #service-areas { background: var(--drx-white); }
+    .area-pill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--drx-light);
+      border: 1px solid rgba(58,110,168,0.15);
+      color: var(--drx-navy);
+      font-size: 0.82rem; font-weight: 600;
+      padding: 0.5rem 1rem; border-radius: 50px;
+      transition: var(--transition);
+    }
+    .area-pill:hover {
+      background: var(--drx-blue); color: #fff;
+      border-color: var(--drx-blue);
+    }
+    .area-pill i { color: var(--drx-blue); font-size: 0.75rem; }
+    .area-pill:hover i { color: #fff; }
+
+    /* ── PAGE-SPECIFIC RESPONSIVE ── */
+    @media (max-width: 767.98px) {
+      #services-hero { padding: 7rem 0 3.5rem; text-align: center; }
+      .page-hero-title { font-size: clamp(2.4rem, 8vw, 3.5rem); }
+    }
