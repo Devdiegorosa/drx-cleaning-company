@@ -1026,7 +1026,7 @@ footer p {
   bottom: 1.5rem;
   right: 1.5rem;
   z-index: 999;
-  display: none;
+  display: block;
 }
 .float-call a {
   width: 58px;
@@ -1073,9 +1073,7 @@ footer p {
        RESPONSIVE
     ============================================================ */
 @media (min-width: 767.98px) {
-  .float-call {
-    display: block;
-  }
+  
   .section-py {
     padding: 4rem 0;
   }
