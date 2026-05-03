@@ -4,7 +4,7 @@
    Depende de: global.css (tokens, navbar, footer, botÃµes, reveal)
 ============================================================ */
 
-/* â”€â”€ HERO DA PÃGINA ABOUT â”€â”€ */
+/* About Hero */
 #about-hero {
   min-height: 100vh;
   background:
@@ -50,7 +50,7 @@
   pointer-events: none;
 }
 
-/* Page hero title â€” reutiliza padrÃ£o do services */
+/* Page hero */
 .page-hero-title {
   font-family: "Barlow Condensed", sans-serif;
   font-size: clamp(3rem, 8vw, 6.5rem);
@@ -71,7 +71,7 @@
   animation: fadeUp 0.9s 0.25s ease both;
 }
 
-/* â”€â”€ BREADCRUMB â”€â”€ */
+/* BREADCRUMB */
 .drx-breadcrumb {
   margin-bottom: 1.6rem;
 }
@@ -92,10 +92,10 @@
 }
 .drx-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.25);
-  content: "â€º";
+  content: "›";
 }
 
-/* â”€â”€ SEÃ‡ÃƒO: NOSSA HISTÃ“RIA â”€â”€ */
+/* Our Story */
 #our-story {
   background: var(--drx-white);
 }
@@ -184,7 +184,7 @@
   line-height: 1.65;
 }
 
-/* â”€â”€ SEÃ‡ÃƒO: NÃšMEROS / STATS â”€â”€ */
+/* Statistics */
 #stats {
   background: linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
   position: relative;
@@ -238,7 +238,7 @@
   border-radius: 2px;
 }
 
-/* â”€â”€ SEÃ‡ÃƒO: MISSÃƒO / VALORES â”€â”€ */
+/* Mission */
 #mission {
   background: #f0f5fa;
 }
@@ -303,7 +303,7 @@
   margin: 0;
 }
 
-/* â”€â”€ SEÃ‡ÃƒO: TIME â”€â”€ */
+/* Time */
 #team {
   background: var(--drx-white);
 }
@@ -408,7 +408,7 @@
   font-size: 0.7rem;
 }
 
-/* â”€â”€ SEÃ‡ÃƒO: VALORES / WHY DARK â”€â”€ */
+/* Values*/
 #values {
   background: linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
   position: relative;
@@ -469,7 +469,7 @@
   line-height: 1.65;
 }
 
-/* â”€â”€ SEÃ‡ÃƒO: CERTIFICAÃ‡Ã•ES â”€â”€ */
+/* Certifications */
 #certifications {
   background: #f0f5fa;
 }
@@ -514,7 +514,7 @@
   margin: 0;
 }
 
-/* â”€â”€ SEÃ‡ÃƒO: DEPOIMENTOS â”€â”€ */
+/* Depoimentos */
 #testimonials {
   background: var(--drx-white);
 }
@@ -589,7 +589,7 @@
   border-color: rgba(58, 110, 168, 0.2);
 }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* RESPONSIVE */
 @media (max-width: 991.98px) {
   #about-hero {
     text-align: center;
