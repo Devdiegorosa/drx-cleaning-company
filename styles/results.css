@@ -1,96 +1,7 @@
 /* ============================================================
-   RESULTS.CSS — DRX Cleaning Company
-   Estilos exclusivos da página Results
-   Depende de: global.css (tokens, navbar, footer, botões, reveal)
+   RESULTS.CSS — estilos exclusivos da página Results
+   Depende de: global.css
 ============================================================ */
-
-/* ── HERO DA PÁGINA RESULTS ── */
-#results-hero {
-  min-height: 100vh;
-  background:
-    radial-gradient(
-      ellipse 80% 60% at 70% 40%,
-      rgba(58, 110, 168, 0.18) 0%,
-      transparent 60%
-    ),
-    linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
-  display: flex;
-  align-items: center;
-  padding: 6rem 0 4rem 0;
-  position: relative;
-  overflow: hidden;
-}
-#results-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent 0px,
-    transparent 18px,
-    rgba(255, 255, 255, 0.018) 18px,
-    rgba(255, 255, 255, 0.018) 19px
-  );
-  pointer-events: none;
-}
-#results-hero::after {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(58, 110, 168, 0.22) 0%,
-    transparent 70%
-  );
-  right: -100px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-.page-hero-title {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  font-weight: 800;
-  line-height: 0.95;
-  color: #fff;
-  letter-spacing: 0.01em;
-  animation: fadeUp 0.8s 0.1s ease both;
-}
-.page-hero-title .accent {
-  color: var(--drx-silver);
-  -webkit-text-stroke: 1px rgba(143, 168, 192, 0.4);
-}
-.hero-visual {
-  position: relative;
-  z-index: 2;
-  animation: fadeUp 0.9s 0.25s ease both;
-}
-
-/* ── BREADCRUMB ── */
-.drx-breadcrumb {
-  margin-bottom: 1.6rem;
-}
-.drx-breadcrumb .breadcrumb-item a {
-  color: var(--drx-silver);
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  transition: color 0.2s;
-}
-.drx-breadcrumb .breadcrumb-item a:hover {
-  color: #fff;
-}
-.drx-breadcrumb .breadcrumb-item.active {
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 0.8rem;
-}
-.drx-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.25);
-  content: "›";
-}
 
 /* ── STATS DARK BAR ── */
 #result-stats {
@@ -502,28 +413,6 @@
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 991.98px) {
-  #results-hero {
-    text-align: center;
-  }
-  .hero-visual {
-    display: none;
-  }
-  .page-hero-title {
-    font-size: clamp(2.4rem, 8vw, 3.5rem);
-  }
-  .hero-btns {
-    justify-content: center;
-  }
-  .hero-trust {
-    justify-content: center;
-  }
-  .hero-sub {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 @media (max-width: 767.98px) {
   .rstat-card {
     border-right: none;

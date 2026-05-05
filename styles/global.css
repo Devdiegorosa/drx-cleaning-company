@@ -300,6 +300,8 @@ section {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
+  margin-left: 0.5rem;
+  gap: 0.5rem;
 }
 .trust-pill i {
   color: var(--drx-silver);
@@ -629,5 +631,166 @@ footer p {
 
    .float-call {
     display: none;
+  }
+}
+
+/* ============================================================
+   PAGE HERO GLOBAL — usado em Home, Services, About e Results
+   Mantém compatibilidade com os IDs atuais e também com .page-hero
+============================================================ */
+:is(#hero, #services-hero, #about-hero, #results-hero, .page-hero) {
+  min-height: auto;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(58, 110, 168, 0.18) 0%, transparent 60%),
+    linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+:is(#hero, #services-hero, #about-hero, #results-hero, .page-hero)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 18px,
+    rgba(255, 255, 255, 0.018) 18px,
+    rgba(255, 255, 255, 0.018) 19px
+  );
+  pointer-events: none;
+}
+
+:is(#hero, #services-hero, #about-hero, #results-hero, .page-hero)::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(58, 110, 168, 0.22) 0%, transparent 70%);
+  right: -140px;
+  top: 52%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+:is(.hero-title, .page-hero-title) {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(2.8rem, 14vw, 4.2rem);
+  font-weight: 800;
+  line-height: 0.95;
+  color: #fff;
+  letter-spacing: 0.01em;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+
+:is(.hero-title, .page-hero-title) .accent {
+  color: var(--drx-silver);
+  -webkit-text-stroke: 1px rgba(143, 168, 192, 0.4);
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.9s 0.25s ease both;
+}
+
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.8rem;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.hero-btns > a,
+.hero-btns > button {
+  justify-content: center;
+}
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+/* Text helpers para substituir style="..." no HTML */
+.section-copy {
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+.section-copy-narrow {
+  max-width: 540px;
+}
+.hero-copy-narrow {
+  max-width: 480px;
+  padding: 0;
+  justify-content: flex-start;
+}
+.text-soft {
+  color: #5a6a7e;
+}
+.text-white-soft {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 991.98px) {
+  :is(#hero, #services-hero, #about-hero, #results-hero, .page-hero) {
+    text-align: center;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  :is(#hero, #services-hero, #about-hero, #results-hero, .page-hero) {
+    min-height: 100vh;
+    padding: 6rem 0 4rem;
+  }
+
+  :is(.hero-title, .page-hero-title) {
+    font-size: clamp(3rem, 8vw, 6.5rem);
+  }
+
+  .hero-btns {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-btns,
+  .hero-trust {
+    justify-content: flex-start;
+  }
+}
+
+
+/* ============================================================
+   ORGANIZATION / ACCESSIBILITY CLEANUP
+============================================================ */
+a { text-underline-offset: 0.18em; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
