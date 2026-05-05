@@ -16,7 +16,7 @@
     linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
   display: flex;
   align-items: center;
-  padding: 9rem 0 5rem;
+  padding: 6rem 0 4rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -401,7 +401,6 @@
   border-color: rgba(58, 110, 168, 0.2);
 }
 .testi-card.featured {
-  background: linear-gradient(135deg, rgba(58,110,168,0.06), rgba(58,110,168,0.02));
   border-color: rgba(58, 110, 168, 0.2);
 }
 .testi-quote {
