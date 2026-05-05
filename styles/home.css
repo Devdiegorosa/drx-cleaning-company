@@ -14,7 +14,7 @@
     linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
   display: flex;
   align-items: center;
-  padding: 9rem 0 5rem;
+  padding: 6rem 0rem 4rem 0rem;
   position: relative;
   overflow: hidden;
 }
@@ -429,7 +429,6 @@
   color: #8fa3b1;
 }
 
-
 /* ============================================================
        CONTACT FORM
     ============================================================ */
@@ -537,15 +536,12 @@
   box-shadow: 0 10px 36px rgba(58, 110, 168, 0.5);
 }
 
-
-
 /* ============================================================
    RESPONSIVE â€” HOME
 ============================================================ */
 @media (max-width: 991.98px) {
   #hero {
     text-align: center;
-    padding: 8rem 0 4rem;
   }
   .hero-visual {
     display: none;
