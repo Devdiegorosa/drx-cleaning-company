@@ -15,7 +15,7 @@
     linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
   display: flex;
   align-items: center;
-  padding: 9rem 0 5rem;
+  padding: 6rem 0 4rem 0;
   position: relative;
   overflow: hidden;
 }
