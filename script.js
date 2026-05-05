@@ -37,3 +37,4 @@ document.getElementById("quoteForm").addEventListener("submit", function (e) {
   btn.style.background = "linear-gradient(135deg,#1a7a45,#22a05a)";
   btn.disabled = true;
 });
+
