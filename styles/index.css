@@ -150,37 +150,44 @@
 .ba-visual {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 200px;
-  position: relative;
-}
-.ba-before,
-.ba-after {
-  display: flex;
-  align-items: flex-end;
-  padding: 0.7rem;
+  height: clamp(220px, 20vw, 280px);
   position: relative;
   overflow: hidden;
 }
-.ba-before {
-  background: linear-gradient(160deg, #3a2510, #5c3518);
-}
+.ba-before,
 .ba-after {
-  background: linear-gradient(160deg, #1a3354, #2c4a6e);
+  position: relative;
+  overflow: hidden;
+  padding: 0;
 }
+
+.carp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .ba-label {
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.25rem 0.6rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 4px;
-  position: relative;
-  z-index: 2;
+
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+
+  z-index: 5;
 }
+
 .ba-before .ba-label {
   background: rgba(0, 0, 0, 0.55);
   color: #c8966a;
 }
+
 .ba-after .ba-label {
   background: rgba(58, 110, 168, 0.75);
   color: #fff;
@@ -289,6 +296,7 @@
   text-transform: uppercase;
   margin-top: 0.5rem;
 }
+
 
 /* ============================================================
        TESTIMONIALS
@@ -482,5 +490,12 @@
 @media (min-width: 768px) {
   .why-card {
     height: 152px;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  .ba-visual {
+    height: 260px;
   }
 }
