@@ -1,4 +1,4 @@
-/* DRX Cleaning Company — Safe front-end interactions */
+/* DRX Cleaning Company — Safe front-end interactions + backend quote form */
 (() => {
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
@@ -36,20 +36,58 @@
 
   const quoteForm = document.getElementById("quoteForm");
   if (quoteForm) {
-    quoteForm.addEventListener("submit", function (event) {
+    quoteForm.addEventListener("submit", async function (event) {
       event.preventDefault();
+
       const btn = document.getElementById("submitBtn");
       if (!btn) return;
-      btn.innerHTML =
-        '<i class="bi bi-check-circle-fill me-2"></i> Quote Requested — We\'ll Call You Shortly!';
-      btn.style.background = "linear-gradient(135deg,#1a7a45,#22a05a)";
+
+      if (!quoteForm.checkValidity()) {
+        quoteForm.reportValidity();
+        return;
+      }
+
+      const originalHtml = btn.innerHTML;
+      const formData = new FormData(quoteForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      // Helps you identify which page generated the lead.
+      payload.page = window.location.href;
+
       btn.disabled = true;
+      btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i> Sending...';
+
+      try {
+        const response = await fetch("https://drx-cleaning-backend.vercel.app/api/quote", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.error || "Quote request failed");
+        }
+
+        btn.classList.add("sent");
+        btn.innerHTML =
+          '<i class="bi bi-check-circle-fill me-2"></i> Sent! We\'ll contact you shortly.';
+        btn.style.background = "linear-gradient(135deg,#1a7a45,#22a05a)";
+        quoteForm.reset();
+      } catch (error) {
+        console.error("Quote form error:", error);
+        btn.disabled = false;
+        btn.innerHTML = originalHtml;
+        alert("Something went wrong. Please call or text (321) 315-8595.");
+      }
     });
   }
 })();
 
 // LOADER
-
 const loader = document.querySelector(".page-loader");
 
 window.addEventListener("load", () => {

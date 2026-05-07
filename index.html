@@ -12,21 +12,21 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="theme-color" content="#0d1b2e" />
     <meta name="format-detection" content="telephone=yes" />
-    <link rel="canonical" href="https://devdiegorosa.github.io/drx-cleaning-company/" />
+    <link rel="canonical" href="https://drxcleaning.com/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="DRX Cleaning Company" />
     <meta property="og:title" content="Carpet Cleaning Orlando FL | DRX Cleaning Company" />
     <meta property="og:description" content="Professional carpet cleaning in Orlando, FL by DRX Cleaning Company. Carpet, sofa, mattress, stain removal and commercial cleaning. Eco-friendly, licensed, insured and same-day available. Call (321) 315-8595." />
-    <meta property="og:image" content="https://devdiegorosa.github.io/drx-cleaning-company/Imagens/logo.png" />
+    <meta property="og:image" content="https://drxcleaning.com/Imagens/logo.png" />
     <meta property="og:image:alt" content="DRX Cleaning Company professional carpet cleaning in Orlando, FL" />
-    <meta property="og:url" content="https://devdiegorosa.github.io/drx-cleaning-company/" />
+    <meta property="og:url" content="https://drxcleaning.com/" />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Carpet Cleaning Orlando FL | DRX Cleaning Company" />
     <meta name="twitter:description" content="Professional carpet cleaning in Orlando, FL by DRX Cleaning Company. Carpet, sofa, mattress, stain removal and commercial cleaning. Eco-friendly, licensed, insured and same-day available. Call (321) 315-8595." />
-    <meta name="twitter:image" content="https://devdiegorosa.github.io/drx-cleaning-company/Imagens/logo.png" />
+    <meta name="twitter:image" content="https://drxcleaning.com/Imagens/logo.png" />
 
     <meta name="geo.region" content="US-FL" />
     <meta name="geo.placename" content="Orlando, Florida" />
@@ -47,14 +47,14 @@
       "@graph": [
             {
                   "@type": "LocalBusiness",
-                  "@id": "https://devdiegorosa.github.io/drx-cleaning-company/#business",
+                  "@id": "https://drxcleaning.com/#business",
                   "name": "DRX Cleaning Company",
                   "description": "Professional carpet, upholstery, mattress, stain removal and commercial cleaning services in Orlando, FL.",
-                  "url": "https://devdiegorosa.github.io/drx-cleaning-company/",
+                  "url": "https://drxcleaning.com/",
                   "telephone": "+13213158595",
                   "email": "info@drxcleaning.com",
-                  "image": "https://devdiegorosa.github.io/drx-cleaning-company/Imagens/logo.png",
-                  "logo": "https://devdiegorosa.github.io/drx-cleaning-company/Imagens/logo.png",
+                  "image": "https://drxcleaning.com/Imagens/logo.png",
+                  "logo": "https://drxcleaning.com/Imagens/logo.png",
                   "priceRange": "$$",
                   "currenciesAccepted": "USD",
                   "paymentAccepted": "Cash, Credit Card, Debit Card, Zelle",
@@ -130,29 +130,29 @@
             },
             {
                   "@type": "WebSite",
-                  "@id": "https://devdiegorosa.github.io/drx-cleaning-company/#website",
-                  "url": "https://devdiegorosa.github.io/drx-cleaning-company/",
+                  "@id": "https://drxcleaning.com/#website",
+                  "url": "https://drxcleaning.com/",
                   "name": "DRX Cleaning Company",
                   "publisher": {
-                        "@id": "https://devdiegorosa.github.io/drx-cleaning-company/#business"
+                        "@id": "https://drxcleaning.com/#business"
                   },
                   "inLanguage": "en-US"
             },
             {
                   "@type": "WebPage",
-                  "@id": "https://devdiegorosa.github.io/drx-cleaning-company/",
-                  "url": "https://devdiegorosa.github.io/drx-cleaning-company/",
+                  "@id": "https://drxcleaning.com/",
+                  "url": "https://drxcleaning.com/",
                   "name": "Carpet Cleaning Orlando FL | DRX Cleaning Company",
                   "description": "Professional carpet cleaning in Orlando, FL by DRX Cleaning Company. Carpet, sofa, mattress, stain removal and commercial cleaning. Eco-friendly, licensed, insured and same-day available. Call (321) 315-8595.",
                   "isPartOf": {
-                        "@id": "https://devdiegorosa.github.io/drx-cleaning-company/#website"
+                        "@id": "https://drxcleaning.com/#website"
                   },
                   "about": {
-                        "@id": "https://devdiegorosa.github.io/drx-cleaning-company/#business"
+                        "@id": "https://drxcleaning.com/#business"
                   },
                   "primaryImageOfPage": {
                         "@type": "ImageObject",
-                        "url": "https://devdiegorosa.github.io/drx-cleaning-company/Imagens/logo.png"
+                        "url": "https://drxcleaning.com/Imagens/logo.png"
                   },
                   "inLanguage": "en-US"
             },
@@ -979,8 +979,10 @@
                     >
                     <input
                       type="text"
+                      name="name"
                       class="form-control"
                       placeholder="Your full name"
+                      autocomplete="name"
                       required
                     />
                   </div>
@@ -992,8 +994,10 @@
                     >
                     <input
                       type="tel"
+                      name="phone"
                       class="form-control"
                       placeholder="(407) 000-0000"
+                      autocomplete="tel"
                       required
                     />
                   </div>
@@ -1003,8 +1007,10 @@
                     <label class="form-label">Email Address</label>
                     <input
                       type="email"
+                      name="email"
                       class="form-control"
                       placeholder="your@email.com"
+                      autocomplete="email"
                     />
                   </div>
 
@@ -1013,7 +1019,7 @@
                     <label class="form-label"
                       >Service Needed <span class="text-danger">*</span></label
                     >
-                    <select class="form-select" required>
+                    <select name="service" class="form-select" required>
                       <option value="" disabled selected>
                         Select a service...
                       </option>
@@ -1031,6 +1037,7 @@
                   <div class="col-12">
                     <label class="form-label">Message / Details</label>
                     <textarea
+                      name="message"
                       class="form-control"
                       rows="4"
                       placeholder="Tell us about your space, square footage, type of stains, preferred date..."

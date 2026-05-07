@@ -13,7 +13,7 @@
     <meta name="robots" content="index, follow" />
     <link
       rel="canonical"
-      href="https://devdiegorosa.github.io/drx-cleaning-company/contact.html"
+      href="https://drxcleaning.com/contact.html"
     />
 
     <meta property="og:type" content="website" />
@@ -27,11 +27,11 @@
     />
     <meta
       property="og:image"
-      content="https://devdiegorosa.github.io/drx-cleaning-company/Imagens/logo.png"
+      content="https://drxcleaning.com/Imagens/logo.png"
     />
     <meta
       property="og:url"
-      content="https://devdiegorosa.github.io/drx-cleaning-company/contact.html"
+      content="https://drxcleaning.com/contact.html"
     />
 
     <meta name="geo.region" content="US-FL" />
@@ -45,11 +45,11 @@
         "@graph": [
           {
             "@type": "LocalBusiness",
-            "@id": "https://devdiegorosa.github.io/drx-cleaning-company/#business",
+            "@id": "https://drxcleaning.com/#business",
             "name": "DRX Cleaning Company",
             "telephone": "+13213158595",
             "email": "info@drxcleaning.com",
-            "url": "https://devdiegorosa.github.io/drx-cleaning-company/",
+            "url": "https://drxcleaning.com/",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Orlando",
@@ -63,7 +63,7 @@
           },
           {
             "@type": "ContactPage",
-            "url": "https://devdiegorosa.github.io/drx-cleaning-company/contact.html",
+            "url": "https://drxcleaning.com/contact.html",
             "name": "Contact DRX Cleaning Company",
             "breadcrumb": {
               "@type": "BreadcrumbList",
@@ -72,13 +72,13 @@
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://devdiegorosa.github.io/drx-cleaning-company/"
+                  "item": "https://drxcleaning.com/"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Contact",
-                  "item": "https://devdiegorosa.github.io/drx-cleaning-company/contact.html"
+                  "item": "https://drxcleaning.com/contact.html"
                 }
               ]
             }
@@ -437,6 +437,7 @@
                         name="name"
                         class="form-control"
                         placeholder="Your full name"
+                        autocomplete="name"
                         required
                       />
                     </div>
@@ -450,6 +451,7 @@
                         name="phone"
                         class="form-control"
                         placeholder="(407) 000-0000"
+                        autocomplete="tel"
                         required
                       />
                     </div>
@@ -461,6 +463,7 @@
                         name="email"
                         class="form-control"
                         placeholder="your@email.com"
+                        autocomplete="email"
                       />
                     </div>
 
@@ -878,21 +881,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-    <script>
-      window.addEventListener("scroll", () => {
-        document.getElementById("mainNav").style.boxShadow =
-          window.scrollY > 60 ? "0 4px 30px rgba(0,0,0,0.35)" : "none";
-      });
 
-      document
-        .getElementById("quoteForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const btn = document.getElementById("submitBtn");
-          btn.classList.add("sent");
-          btn.innerHTML =
-            '<i class="bi bi-check-circle-fill"></i> Sent! We\'ll contact you shortly.';
-        });
-    </script>
   </body>
 </html>
