@@ -1,88 +1,7 @@
 /* ============================================================
-   RESULTS.CSS — DRX Cleaning Company
-   Estilos exclusivos da página Results
-   Depende de: global.css (tokens, navbar, footer, botões, reveal)
+   RESULTS.CSS — estilos exclusivos da página Results
+   Depende de: global.css
 ============================================================ */
-
-/* ── HERO DA PÁGINA RESULTS ── */
-#results-hero {
-  min-height: 100vh;
-  background:
-    radial-gradient(
-      ellipse 80% 60% at 70% 40%,
-      rgba(58, 110, 168, 0.18) 0%,
-      transparent 60%
-    ),
-    linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
-  display: flex;
-  align-items: center;
-  padding: 9rem 0 5rem;
-  position: relative;
-  overflow: hidden;
-}
-#results-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent 0px,
-    transparent 18px,
-    rgba(255, 255, 255, 0.018) 18px,
-    rgba(255, 255, 255, 0.018) 19px
-  );
-  pointer-events: none;
-}
-#results-hero::after {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(58, 110, 168, 0.22) 0%, transparent 70%);
-  right: -100px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-.page-hero-title {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  font-weight: 800;
-  line-height: 0.95;
-  color: #fff;
-  letter-spacing: 0.01em;
-  animation: fadeUp 0.8s 0.1s ease both;
-}
-.page-hero-title .accent {
-  color: var(--drx-silver);
-  -webkit-text-stroke: 1px rgba(143, 168, 192, 0.4);
-}
-.hero-visual {
-  position: relative;
-  z-index: 2;
-  animation: fadeUp 0.9s 0.25s ease both;
-}
-
-/* ── BREADCRUMB ── */
-.drx-breadcrumb { margin-bottom: 1.6rem; }
-.drx-breadcrumb .breadcrumb-item a {
-  color: var(--drx-silver);
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  transition: color 0.2s;
-}
-.drx-breadcrumb .breadcrumb-item a:hover { color: #fff; }
-.drx-breadcrumb .breadcrumb-item.active {
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 0.8rem;
-}
-.drx-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.25);
-  content: "›";
-}
 
 /* ── STATS DARK BAR ── */
 #result-stats {
@@ -96,8 +15,10 @@
   inset: 0;
   background-image: repeating-linear-gradient(
     90deg,
-    transparent 0px, transparent 18px,
-    rgba(255, 255, 255, 0.015) 18px, rgba(255, 255, 255, 0.015) 19px
+    transparent 0px,
+    transparent 18px,
+    rgba(255, 255, 255, 0.015) 18px,
+    rgba(255, 255, 255, 0.015) 19px
   );
 }
 .rstat-card {
@@ -107,7 +28,9 @@
   position: relative;
   z-index: 1;
 }
-.rstat-card:last-child { border-right: none; }
+.rstat-card:last-child {
+  border-right: none;
+}
 .rstat-num {
   font-family: "Barlow Condensed", sans-serif;
   font-size: clamp(2.8rem, 5vw, 4.5rem);
@@ -115,7 +38,9 @@
   color: #fff;
   line-height: 1;
 }
-.rstat-num span { color: var(--drx-silver); }
+.rstat-num span {
+  color: var(--drx-silver);
+}
 .rstat-label {
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.45);
@@ -132,7 +57,9 @@
 }
 
 /* ── FILTRO DE CATEGORIA ── */
-#gallery-filter { background: var(--drx-white); }
+#gallery-filter {
+  background: var(--drx-white);
+}
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -187,7 +114,9 @@
   -webkit-user-select: none;
   background: var(--drx-light);
 }
-.ba-slider-wrap.dragging { cursor: grabbing; }
+.ba-slider-wrap.dragging {
+  cursor: grabbing;
+}
 
 .ba-img-before,
 .ba-img-after {
@@ -200,7 +129,9 @@
   display: block;
   pointer-events: none;
 }
-.ba-img-before { z-index: 1; }
+.ba-img-before {
+  z-index: 1;
+}
 .ba-img-after {
   z-index: 2;
   clip-path: inset(0 50% 0 0);
@@ -290,7 +221,9 @@
   transition: opacity 0.4s ease;
   margin-top: 32px;
 }
-.ba-drag-hint.hidden { opacity: 0; }
+.ba-drag-hint.hidden {
+  opacity: 0;
+}
 
 /* Card info footer */
 .ba-card-info {
@@ -323,7 +256,9 @@
   border-radius: 4px;
   text-transform: uppercase;
 }
-.ba-tag i { font-size: 0.7rem; }
+.ba-tag i {
+  font-size: 0.7rem;
+}
 .ba-meta {
   display: flex;
   flex-wrap: wrap;
@@ -338,7 +273,10 @@
   color: #8fa3b1;
   font-weight: 500;
 }
-.ba-meta-item i { font-size: 0.7rem; color: var(--drx-blue); }
+.ba-meta-item i {
+  font-size: 0.7rem;
+  color: var(--drx-blue);
+}
 
 /* ── SEÇÃO GARANTIA ── */
 #guarantee {
@@ -352,8 +290,10 @@
   inset: 0;
   background-image: repeating-linear-gradient(
     90deg,
-    transparent 0px, transparent 18px,
-    rgba(255, 255, 255, 0.015) 18px, rgba(255, 255, 255, 0.015) 19px
+    transparent 0px,
+    transparent 18px,
+    rgba(255, 255, 255, 0.015) 18px,
+    rgba(255, 255, 255, 0.015) 19px
   );
 }
 .guarantee-icon {
@@ -384,7 +324,9 @@
 }
 
 /* ── TESTIMONIALS ── */
-#reviews { background: var(--drx-white); }
+#reviews {
+  background: var(--drx-white);
+}
 .testi-card {
   background: #fff;
   border: 1px solid rgba(13, 27, 46, 0.07);
@@ -401,7 +343,6 @@
   border-color: rgba(58, 110, 168, 0.2);
 }
 .testi-card.featured {
-  background: linear-gradient(135deg, rgba(58,110,168,0.06), rgba(58,110,168,0.02));
   border-color: rgba(58, 110, 168, 0.2);
 }
 .testi-quote {
@@ -447,8 +388,15 @@
   color: #fff;
   flex-shrink: 0;
 }
-.author-name { font-weight: 700; font-size: 0.9rem; color: var(--drx-navy); }
-.author-loc  { font-size: 0.77rem; color: #8fa3b1; }
+.author-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--drx-navy);
+}
+.author-loc {
+  font-size: 0.77rem;
+  color: #8fa3b1;
+}
 .service-tag {
   display: inline-flex;
   align-items: center;
@@ -465,20 +413,16 @@
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 991.98px) {
-  #results-hero { text-align: center; padding: 8rem 0 4rem; }
-  .hero-visual { display: none; }
-  .page-hero-title { font-size: clamp(2.4rem, 8vw, 3.5rem); }
-  .hero-btns { justify-content: center; }
-  .hero-trust { justify-content: center; }
-  .hero-sub { margin-left: auto; margin-right: auto; }
-}
 @media (max-width: 767.98px) {
   .rstat-card {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     padding: 1.4rem 0.8rem;
   }
-  .rstat-card:last-child { border-bottom: none; }
-  .ba-slider-wrap { height: 220px; }
+  .rstat-card:last-child {
+    border-bottom: none;
+  }
+  .ba-slider-wrap {
+    height: 220px;
+  }
 }

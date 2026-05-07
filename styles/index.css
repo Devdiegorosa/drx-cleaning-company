@@ -1,74 +1,7 @@
 /* ============================================================
-   ESTILOS EXCLUSIVOS DA PÃGINA HOME
-   Depende de global.css
+   INDEX.CSS — estilos exclusivos da Home
+   Depende de: global.css
 ============================================================ */
-
-#hero {
-  min-height: 100vh;
-  background:
-    radial-gradient(
-      ellipse 80% 60% at 70% 40%,
-      rgba(58, 110, 168, 0.18) 0%,
-      transparent 60%
-    ),
-    linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
-  display: flex;
-  align-items: center;
-  padding: 6rem 0rem 4rem 0rem;
-  position: relative;
-  overflow: hidden;
-}
-/* Subtle vertical stripe texture */
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent 0px,
-    transparent 18px,
-    rgba(255, 255, 255, 0.018) 18px,
-    rgba(255, 255, 255, 0.018) 19px
-  );
-  pointer-events: none;
-}
-/* Glow orb */
-#hero::after {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(58, 110, 168, 0.22) 0%,
-    transparent 70%
-  );
-  right: -100px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.hero-title {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  font-weight: 800;
-  line-height: 0.95;
-  color: #fff;
-  letter-spacing: 0.01em;
-  animation: fadeUp 0.8s 0.1s ease both;
-}
-.hero-title .accent {
-  color: var(--drx-silver);
-  -webkit-text-stroke: 1px rgba(143, 168, 192, 0.4);
-}
-
-.hero-visual {
-  position: relative;
-  z-index: 2;
-  animation: fadeUp 0.9s 0.25s ease both;
-}
 
 /* ============================================================
        SERVICES SECTION
@@ -217,37 +150,44 @@
 .ba-visual {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 200px;
-  position: relative;
-}
-.ba-before,
-.ba-after {
-  display: flex;
-  align-items: flex-end;
-  padding: 0.7rem;
+  height: clamp(220px, 20vw, 280px);
   position: relative;
   overflow: hidden;
 }
-.ba-before {
-  background: linear-gradient(160deg, #3a2510, #5c3518);
-}
+.ba-before,
 .ba-after {
-  background: linear-gradient(160deg, #1a3354, #2c4a6e);
+  position: relative;
+  overflow: hidden;
+  padding: 0;
 }
+
+.carp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .ba-label {
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.25rem 0.6rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 4px;
-  position: relative;
-  z-index: 2;
+
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+
+  z-index: 5;
 }
+
 .ba-before .ba-label {
   background: rgba(0, 0, 0, 0.55);
   color: #c8966a;
 }
+
 .ba-after .ba-label {
   background: rgba(58, 110, 168, 0.75);
   color: #fff;
@@ -356,6 +296,7 @@
   text-transform: uppercase;
   margin-top: 0.5rem;
 }
+
 
 /* ============================================================
        TESTIMONIALS
@@ -540,12 +481,6 @@
    RESPONSIVE â€” HOME
 ============================================================ */
 @media (max-width: 991.98px) {
-  #hero {
-    text-align: center;
-  }
-  .hero-visual {
-    display: none;
-  }
   .contact-left,
   .contact-right {
     padding: 2rem 1.6rem;
@@ -555,5 +490,12 @@
 @media (min-width: 768px) {
   .why-card {
     height: 152px;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  .ba-visual {
+    height: 260px;
   }
 }
