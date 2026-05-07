@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://devdiegorosa.github.io/drx-cleaning-company/</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://www.drxcleaning.com/</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://devdiegorosa.github.io/drx-cleaning-company/services.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://www.drxcleaning.com/services.html</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://devdiegorosa.github.io/drx-cleaning-company/about.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://www.drxcleaning.com/about.html</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://devdiegorosa.github.io/drx-cleaning-company/results.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://www.drxcleaning.com/results.html</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://devdiegorosa.github.io/drx-cleaning-company/contact.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://www.drxcleaning.com/contact.html</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
