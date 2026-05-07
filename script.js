@@ -58,14 +58,22 @@
       btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i> Sending...';
 
       try {
-        const response = await fetch("https://drx-cleaning-backend.vercel.app/api/quote", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+        const response = await fetch(
+          "https://drx-cleaning-backend.vercel.app/api/quote",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name,
+              phone,
+              email,
+              service,
+              message,
+            }),
           },
-          body: JSON.stringify(payload),
-        });
-
+        );
         const result = await response.json().catch(() => ({}));
 
         if (!response.ok || !result.success) {
