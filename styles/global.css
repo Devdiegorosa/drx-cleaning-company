@@ -314,6 +314,8 @@ section {
   font-weight: 500;
   margin-left: 0.5rem;
   gap: 0.5rem;
+  margin-left: 0.5rem;
+  gap: 0.5rem;
 }
 .trust-pill i {
   color: var(--drx-silver);
