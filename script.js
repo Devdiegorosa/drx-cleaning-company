@@ -5,6 +5,7 @@
   ).matches;
 
   const revealElements = document.querySelectorAll(".reveal");
+
   if ("IntersectionObserver" in window && !prefersReducedMotion) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -17,12 +18,14 @@
       },
       { threshold: 0.12 },
     );
+
     revealElements.forEach((el) => observer.observe(el));
   } else {
     revealElements.forEach((el) => el.classList.add("in"));
   }
 
   const mainNav = document.getElementById("mainNav");
+
   if (mainNav) {
     window.addEventListener(
       "scroll",
@@ -35,6 +38,7 @@
   }
 
   const quoteForm = document.getElementById("quoteForm");
+
   if (quoteForm) {
     quoteForm.addEventListener("submit", async function (event) {
       event.preventDefault();
@@ -48,10 +52,10 @@
       }
 
       const originalHtml = btn.innerHTML;
+
       const formData = new FormData(quoteForm);
       const payload = Object.fromEntries(formData.entries());
 
-      // Helps you identify which page generated the lead.
       payload.page = window.location.href;
 
       btn.disabled = true;
@@ -65,18 +69,15 @@
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-              name,
-              phone,
-              email,
-              service,
-              message,
-            }),
+            body: JSON.stringify(payload),
           },
         );
+
         const result = await response.json().catch(() => ({}));
 
-        if (!response.ok || !result.success) {
+        console.log("Quote API response:", result);
+
+        if (!response.ok) {
           throw new Error(result.error || "Quote request failed");
         }
 
@@ -84,11 +85,14 @@
         btn.innerHTML =
           '<i class="bi bi-check-circle-fill me-2"></i> Sent! We\'ll contact you shortly.';
         btn.style.background = "linear-gradient(135deg,#1a7a45,#22a05a)";
+
         quoteForm.reset();
       } catch (error) {
         console.error("Quote form error:", error);
+
         btn.disabled = false;
         btn.innerHTML = originalHtml;
+
         alert("Something went wrong. Please call or text (321) 315-8595.");
       }
     });
