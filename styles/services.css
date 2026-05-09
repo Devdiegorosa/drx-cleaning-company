@@ -438,4 +438,8 @@
   color: #fff;
 }
 
+.area-pill a {
+  text-decoration: none;
+}
+
 /* Responsivo específico da página Services fica abaixo, se necessário. */
