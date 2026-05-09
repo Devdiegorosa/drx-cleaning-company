@@ -500,10 +500,11 @@ footer {
 }
 footer p {
   font-size: 0.83rem;
+  max-width: 380px;
   color: rgba(255, 255, 255, 0.45);
   line-height: 1.75;
 }
-.footer-col h6 {
+.footer-col h6, .social h6 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
@@ -512,10 +513,11 @@ footer p {
   color: var(--drx-silver);
   margin-bottom: 1rem;
 }
+
 .footer-col ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin:0;
 }
 .footer-col ul li {
   margin-bottom: 0.5rem;
@@ -536,6 +538,33 @@ footer p {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.3);
 }
+
+.social {
+  margin-top: 1.5rem;
+}
+
+.social-icons { display: flex; gap: 0.65rem; }
+
+.social-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.si-ig { background: rgba(225, 48, 108, 0.15); border-color: rgba(225, 48, 108, 0.25); color: #f4809c; }
+.si-ig:hover { background: rgba(225, 48, 108, 0.28); border-color: rgba(225, 48, 108, 0.5); color: #ffaabf; transform: translateY(-2px); }
+
+.si-fb { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.25); color: #74a9ff; }
+.si-fb:hover { background: rgba(24, 119, 242, 0.28); border-color: rgba(24, 119, 242, 0.5); color: #a8c8ff; transform: translateY(-2px); }
+
+.si-wa { background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.25); color: #5de08a; }
+.si-wa:hover { background: rgba(37, 211, 102, 0.28); border-color: rgba(37, 211, 102, 0.5); color: #90f0b4; transform: translateY(-2px); }
 
 /* ============================================================
        FLOATING CALL BUTTON (mobile)
@@ -819,6 +848,7 @@ footer p {
     transform: scale(1.04);
   }
 }
+
 
 @media (max-width: 991.98px) {
   :is(#hero, #services-hero, #about-hero, #results-hero, .page-hero, #contact-hero) {

@@ -1,0 +1,338 @@
+/* ============================================================
+   TERMS.CSS — DRX Cleaning Company
+   Estilos exclusivos da página Terms & Conditions
+   Depende de: global.css
+============================================================ */
+
+/* ── HERO ── */
+#terms-hero {
+  background:
+    radial-gradient(ellipse 70% 50% at 60% 50%, rgba(58, 110, 168, 0.16) 0%, transparent 65%),
+    linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
+  padding: 9rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+#terms-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0px, transparent 18px,
+    rgba(255, 255, 255, 0.018) 18px, rgba(255, 255, 255, 0.018) 19px
+  );
+  pointer-events: none;
+}
+
+.terms-hero-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+.terms-hero-title .accent { color: var(--drx-silver); }
+
+.terms-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(58, 110, 168, 0.18);
+  border: 1px solid rgba(58, 110, 168, 0.35);
+  padding: 0.32rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--drx-silver);
+  margin-bottom: 1.4rem;
+}
+
+/* ── BREADCRUMB ── */
+.drx-breadcrumb { margin-bottom: 1.6rem; }
+.drx-breadcrumb .breadcrumb-item a {
+  color: var(--drx-silver);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.drx-breadcrumb .breadcrumb-item a:hover { color: #fff; }
+.drx-breadcrumb .breadcrumb-item.active {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.8rem;
+}
+.drx-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.25);
+  content: "›";
+}
+
+/* ── SEÇÃO PRINCIPAL ── */
+#terms-content { background: var(--drx-white); }
+
+/* ── TABLE OF CONTENTS (sidebar) ── */
+.toc-card {
+  background: var(--drx-light);
+  border: 1px solid rgba(58, 110, 168, 0.15);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  position: sticky;
+  top: 100px;
+}
+.toc-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--drx-blue);
+  margin-bottom: 1rem;
+}
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toc-list li { margin-bottom: 0.4rem; }
+.toc-list a {
+  font-size: 0.83rem;
+  color: #5a6a7e;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  transition: color 0.2s;
+}
+.toc-list a:hover { color: var(--drx-blue); }
+.toc-list a i { font-size: 0.65rem; color: var(--drx-blue); flex-shrink: 0; }
+
+.toc-contact {
+  margin-top: 1.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(58, 110, 168, 0.15);
+}
+.toc-contact p {
+  font-size: 0.8rem;
+  color: #6b7a8d;
+  margin-bottom: 0.7rem;
+}
+.toc-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--drx-steel), var(--drx-blue));
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 0.65rem 1.2rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(58, 110, 168, 0.3);
+}
+.toc-cta:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(58, 110, 168, 0.45);
+}
+
+/* ── TERMS BODY ── */
+.terms-body { max-width: 700px; }
+
+.terms-section {
+  padding-bottom: 2.8rem;
+  margin-bottom: 2.8rem;
+  border-bottom: 1px solid rgba(13, 27, 46, 0.07);
+}
+.terms-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.terms-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--drx-blue);
+  margin-bottom: 0.6rem;
+}
+.terms-section-label i { font-size: 0.75rem; }
+
+.terms-section h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--drx-navy);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.terms-section p {
+  font-size: 0.92rem;
+  color: #4a5568;
+  line-height: 1.85;
+  margin-bottom: 0.9rem;
+}
+.terms-section p:last-child { margin-bottom: 0; }
+
+/* Listas */
+.terms-section ul,
+.terms-section ol {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0.9rem;
+}
+.terms-section ul li,
+.terms-section ol li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: #4a5568;
+  line-height: 1.75;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(13, 27, 46, 0.05);
+}
+.terms-section ul li:last-child,
+.terms-section ol li:last-child { border-bottom: none; }
+
+.terms-section ul li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--drx-blue);
+  flex-shrink: 0;
+  margin-top: 0.55rem;
+}
+
+.terms-section ol { counter-reset: terms-counter; }
+.terms-section ol li { counter-increment: terms-counter; }
+.terms-section ol li::before {
+  content: counter(terms-counter);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--drx-blue);
+  background: var(--drx-light);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* Bloco de destaque */
+.terms-highlight {
+  background: var(--drx-light);
+  border-left: 3px solid var(--drx-blue);
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.3rem;
+  margin: 1.2rem 0;
+  font-size: 0.88rem;
+  color: var(--drx-navy);
+  line-height: 1.7;
+}
+.terms-highlight strong { color: var(--drx-blue); }
+
+/* Bloco de aviso */
+.terms-warning {
+  background: rgba(239, 68, 68, 0.06);
+  border-left: 3px solid #ef4444;
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.3rem;
+  margin: 1.2rem 0;
+  font-size: 0.88rem;
+  color: var(--drx-navy);
+  line-height: 1.7;
+}
+.terms-warning strong { color: #dc2626; }
+
+/* Caixa de contato no final */
+.contact-box {
+  background: linear-gradient(160deg, var(--drx-navy), var(--drx-deep));
+  border-radius: 14px;
+  padding: 2rem 2.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.contact-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0px, transparent 18px,
+    rgba(255, 255, 255, 0.015) 18px, rgba(255, 255, 255, 0.015) 19px
+  );
+  pointer-events: none;
+}
+.contact-box h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  position: relative;
+  z-index: 1;
+}
+.contact-box p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+.contact-box-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  position: relative;
+  z-index: 1;
+}
+.contact-box-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.contact-box-link i { color: var(--drx-silver); font-size: 0.9rem; }
+.contact-box-link:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(143, 168, 192, 0.3);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 991.98px) {
+  .toc-card { position: static; margin-bottom: 2.5rem; }
+}
+@media (max-width: 767.98px) {
+  #terms-hero { padding: 7.5rem 0 3rem; }
+}

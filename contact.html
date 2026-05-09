@@ -11,10 +11,6 @@
       content="Contact DRX Cleaning Company in Orlando, FL. Call, text or WhatsApp (321) 315-8595. Request a free carpet cleaning quote — same-day available, no obligation."
     />
     <meta name="robots" content="index, follow" />
-    <link
-      rel="canonical"
-      href="https://www.drxcleaning.com/contact.html"
-    />
 
     <meta property="og:type" content="website" />
     <meta
@@ -27,7 +23,7 @@
     />
     <meta
       property="og:image"
-      content="https://www.drxcleaning.com/Imagens/logo.png"
+      content="https://www.drxcleaning.com/imagens/logo.png"
     />
     <meta
       property="og:url"
@@ -36,8 +32,9 @@
 
     <meta name="geo.region" content="US-FL" />
     <meta name="geo.placename" content="Orlando, Florida" />
-
-    <link rel="icon" type="image/png" href="Imagens/logo.png" />
+    <link rel="canonical" href="https://www.drxcleaning.com/contact.html" />
+    <link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt" />
+    <link rel="icon" type="image/png" href="imagens/logo.png" />
 
     <script type="application/ld+json">
       {
@@ -57,7 +54,7 @@
               "addressCountry": "US"
             },
             "sameAs": [
-              "https://www.instagram.com/drxcleaningcompany",
+              "https://www.instagram.com/drxcleaning",
               "https://www.facebook.com/drxcleaningcompany"
             ]
           },
@@ -140,7 +137,7 @@
           href="index.html"
         >
           <img
-            src="Imagens/logo.png"
+            src="imagens/logo.png"
             alt="DRX Cleaning Company"
             width="50"
             height="50"
@@ -188,7 +185,7 @@
   ============================================================ -->
     <header id="contact-hero" role="banner">
       <video class="hero-video" autoplay muted loop playsinline>
-        <source src="Videos/cleaning-hero.mp4" type="video/mp4" />
+        <source src="videos/cleaning-hero.mp4" type="video/mp4" />
       </video>
       <div class="container">
         <nav aria-label="Breadcrumb" class="drx-breadcrumb">
@@ -706,7 +703,7 @@
               class="d-flex align-items-center gap-2 text-decoration-none mb-3"
             >
               <img
-                src="Imagens/logo.png"
+                src="imagens/logo.png"
                 alt="DRX Cleaning Company"
                 width="50"
                 height="50"
@@ -720,73 +717,37 @@
               sofas, and mattresses restored to like-new — guaranteed.
             </p>
             <!-- Social icons no footer -->
-            <div class="d-flex gap-2 mt-3">
-              <a
-                href="https://www.instagram.com/drxcleaning"
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram"
-                style="
-                  width: 36px;
-                  height: 36px;
-                  border-radius: 8px;
-                  background: rgba(225, 48, 108, 0.15);
-                  border: 1px solid rgba(225, 48, 108, 0.25);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: #f4809c;
-                  font-size: 1rem;
-                  text-decoration: none;
-                  transition: all 0.2s;
-                "
-              >
-                <i class="bi bi-instagram"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/share/1cLFaiZSrn/?mibextid=wwXIfr"
-                target="_blank"
-                rel="noopener"
-                aria-label="Facebook"
-                style="
-                  width: 36px;
-                  height: 36px;
-                  border-radius: 8px;
-                  background: rgba(24, 119, 242, 0.15);
-                  border: 1px solid rgba(24, 119, 242, 0.25);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: #74a9ff;
-                  font-size: 1rem;
-                  text-decoration: none;
-                  transition: all 0.2s;
-                "
-              >
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a
-                href="https://wa.me/13213158595"
-                target="_blank"
-                rel="noopener"
-                aria-label="WhatsApp"
-                style="
-                  width: 36px;
-                  height: 36px;
-                  border-radius: 8px;
-                  background: rgba(37, 211, 102, 0.15);
-                  border: 1px solid rgba(37, 211, 102, 0.25);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: #5de08a;
-                  font-size: 1rem;
-                  text-decoration: none;
-                  transition: all 0.2s;
-                "
-              >
-                <i class="bi bi-whatsapp"></i>
-              </a>
+            <div class="social">
+              <h6>Follow Us</h6>
+              <div class="social-icons">
+                <a
+                  href="https://www.instagram.com/drxcleaning"
+                  target="_blank"
+                  rel="noopener"
+                  class="social-icon-btn si-ig"
+                  aria-label="DRX on Instagram"
+                >
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/share/1cLFaiZSrn/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener"
+                  class="social-icon-btn si-fb"
+                  aria-label="DRX on Facebook"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a
+                  href="https://wa.me/13213158595"
+                  target="_blank"
+                  rel="noopener"
+                  class="social-icon-btn si-wa"
+                  aria-label="DRX on WhatsApp"
+                >
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -830,24 +791,21 @@
               </li>
               <li>
                 <a href="mailto:info@drxcleaning.com"
-                  ><i clhttps://www.instagram.com/drxcleaning
+                  ><i class="bi bi-envelope-fill me-2"></i
                   >info@drxcleaning.com</a
+                ><br /><br />
+              </li>
+            </ul>
+            <h6 class="legal">Legal</h6>
+            <ul>
+              <li>
+                <a href="privacy.html"
+                  ><i class="bi bi-shield-lock me-2"></i>Privacy Policy</a
                 >
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/drxcleaningcompany"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-instagram me-2"></i>@drxcleaning</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/share/1cLFaiZSrn/?mibextid=wwXIfr"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-facebook me-2"></i>DRX Cleaning Company</a
+                <a href="terms.html"
+                  ><i class="bi bi-file-text me-2"></i>Terms & Conditions</a
                 >
               </li>
             </ul>
@@ -881,6 +839,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-
   </body>
 </html>
