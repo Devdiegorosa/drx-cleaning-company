@@ -486,18 +486,12 @@ footer {
 }
 .text-logo1 {
   color: var(--drx-white);
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  letter-spacing: 0.06em;
-}
-.text-logo2 {
-  color: var(--drx-white);
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
+  font-size: 1.5rem;
   letter-spacing: 0.06em;
 }
+
 footer p {
   font-size: 0.83rem;
   max-width: 380px;
