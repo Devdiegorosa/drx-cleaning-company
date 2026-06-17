@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+  <link rel="preload" as="image" href="imagens/carpet-af.webp" fetchpriority="high"/>
+  
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-495678559"
@@ -316,8 +318,8 @@
         playsinline
         poster="imagens/carpet-af.webp"
       >
-        <source src="videos/cleaning-hero.webm" type="video/webm" />
-        <source src="videos/cleaning-hero.mp4" type="video/mp4" />
+        <source data-src="videos/cleaning-hero.webm" type="video/webm" />
+        <source data-src="videos/cleaning-hero.mp4" type="video/mp4" />
       </video>
       <div class="container position-relative" style="z-index: 2">
         <nav aria-label="Breadcrumb" class="drx-breadcrumb">
@@ -1478,5 +1480,19 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+  <script>
+    // Load hero video only after page is fully loaded to improve LCP
+    window.addEventListener('load', function() {
+      var video = document.querySelector('.hero-video');
+      if (!video) return;
+      var sources = video.querySelectorAll('source[data-src]');
+      sources.forEach(function(s) {
+        s.src = s.getAttribute('data-src');
+        s.removeAttribute('data-src');
+      });
+      video.load();
+      video.play().catch(function(){});
+    });
+  </script>
   </body>
 </html>
