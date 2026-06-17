@@ -1,0 +1,249 @@
+/* ============================================================
+   SERVICE-PAGES.CSS — Shared styles for all DRX service pages
+   Used by: carpet-cleaning.html, upholstery-cleaning.html,
+   mattress-cleaning.html, pet-odor-stain-removal.html,
+   commercial-carpet-cleaning.html, area-rug-cleaning.html
+   Depends on: global.css
+============================================================ */
+
+/* SERVICE PAGE HERO */
+.svc-hero {
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%,rgba(58,110,168,.2) 0%,transparent 60%),
+    linear-gradient(160deg,var(--drx-navy) 0%,var(--drx-deep) 100%);
+  display:flex;align-items:center;
+  padding:7rem 0 4rem;
+  position:relative;overflow:hidden;
+}
+.svc-hero::before {
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,transparent 0px,transparent 18px,rgba(255,255,255,.015) 18px,rgba(255,255,255,.015) 19px);
+}
+
+/* BREADCRUMB */
+nav.drx-breadcrumb { margin-bottom:1.4rem; }
+
+/* INTRO CONTENT */
+.svc-intro { background:var(--drx-white);padding:5rem 0; }
+.svc-intro-lead {
+  font-size:1.1rem;line-height:1.85;color:#42536a;margin-bottom:1.2rem;
+}
+.svc-intro-body { font-size:.95rem;line-height:1.85;color:#5a6a7e; }
+.svc-intro-body p { margin-bottom:1rem; }
+
+/* BENEFITS SECTION */
+.svc-benefits { background:#f0f5fa;padding:5rem 0; }
+.benefit-card {
+  background:#fff;border:1px solid rgba(13,27,46,.07);
+  border-radius:14px;padding:2rem 1.6rem;height:100%;
+  transition:var(--transition);position:relative;overflow:hidden;
+}
+.benefit-card::before {
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--drx-steel),var(--drx-blue));
+  transform:scaleX(0);transform-origin:left;transition:transform .35s ease;
+}
+.benefit-card:hover { transform:translateY(-5px);box-shadow:var(--drx-shadow);border-color:rgba(58,110,168,.2); }
+.benefit-card:hover::before { transform:scaleX(1); }
+.benefit-icon {
+  width:56px;height:56px;border-radius:14px;
+  background:var(--drx-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;color:var(--drx-steel);margin-bottom:1rem;
+  transition:var(--transition);
+}
+.benefit-card:hover .benefit-icon { background:var(--drx-steel);color:#fff; }
+.benefit-card h5 { font-size:1.1rem;font-weight:700;color:var(--drx-navy);margin-bottom:.4rem; }
+.benefit-card p { font-size:.85rem;color:#5a6a7e;line-height:1.7;margin:0; }
+
+/* PROCESS SECTION */
+.svc-process {
+  background:linear-gradient(160deg,var(--drx-navy) 0%,var(--drx-deep) 100%);
+  padding:5rem 0;position:relative;overflow:hidden;
+}
+.svc-process::before {
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,transparent 0px,transparent 18px,rgba(255,255,255,.015) 18px,rgba(255,255,255,.015) 19px);
+}
+.process-step {
+  display:flex;gap:1.4rem;margin-bottom:2.5rem;
+  position:relative;z-index:1;
+}
+.process-step:last-child { margin-bottom:0; }
+.step-num {
+  width:52px;height:52px;border-radius:50%;flex-shrink:0;
+  background:rgba(58,110,168,.25);border:2px solid rgba(58,110,168,.4);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Barlow Condensed",sans-serif;font-size:1.4rem;font-weight:800;
+  color:var(--drx-silver);
+}
+.step-body h5 { font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.3rem; }
+.step-body p { font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.65;margin:0; }
+
+/* BEFORE & AFTER */
+.svc-ba { background:var(--drx-white);padding:5rem 0; }
+.svc-ba-card {
+  border-radius:var(--drx-radius);overflow:hidden;
+  box-shadow:var(--drx-shadow);border:1px solid rgba(13,27,46,.08);
+  transition:var(--transition);
+}
+.svc-ba-card:hover { transform:translateY(-5px);box-shadow:var(--drx-shadow-lg); }
+.svc-ba-visual {
+  display:grid;grid-template-columns:1fr 1fr;
+  height:clamp(200px,22vw,300px);position:relative;overflow:hidden;
+}
+.svc-ba-before,.svc-ba-after { position:relative;overflow:hidden; }
+.svc-ba-before img,.svc-ba-after img { width:100%;height:100%;object-fit:cover;display:block; }
+.svc-ba-label {
+  font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  padding:.3rem .7rem;border-radius:4px;
+  position:absolute;bottom:12px;left:12px;z-index:5;
+}
+.svc-ba-before .svc-ba-label { background:rgba(0,0,0,.6);color:#c8966a; }
+.svc-ba-after .svc-ba-label { background:rgba(58,110,168,.8);color:#fff; }
+.svc-ba-divider { position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);z-index:3; }
+.svc-ba-btn {
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:32px;height:32px;border-radius:50%;background:#fff;z-index:4;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;font-weight:900;color:var(--drx-navy);
+  box-shadow:0 2px 10px rgba(0,0,0,.3);
+}
+.svc-ba-info { background:#fff;padding:1.2rem 1.4rem; }
+.svc-ba-info h6 { font-family:"Barlow Condensed",sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:.2rem; }
+.svc-ba-info p { font-size:.8rem;color:#6b7a8d;margin:0; }
+.svc-ba-tag {
+  display:inline-flex;align-items:center;gap:.3rem;
+  background:#e6f4ee;color:#1a7a45;
+  font-size:.66rem;font-weight:700;letter-spacing:.06em;
+  padding:.2rem .55rem;border-radius:4px;text-transform:uppercase;margin-top:.5rem;
+}
+
+/* WHY CHOOSE DRX */
+.svc-why { background:#f0f5fa;padding:5rem 0; }
+.why-drx-card {
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1.4rem;background:#fff;
+  border:1px solid rgba(13,27,46,.07);border-radius:12px;
+  transition:var(--transition);height:100%;
+}
+.why-drx-card:hover { box-shadow:var(--drx-shadow);border-color:rgba(58,110,168,.2);transform:translateY(-3px); }
+.why-drx-icon {
+  width:46px;height:46px;border-radius:10px;flex-shrink:0;
+  background:var(--drx-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;color:var(--drx-steel);
+}
+.why-drx-card h6 { font-size:1rem;font-weight:700;color:var(--drx-navy);margin-bottom:.2rem; }
+.why-drx-card p { font-size:.82rem;color:#5a6a7e;margin:0;line-height:1.6; }
+
+/* SERVICE AREAS */
+.svc-areas { background:var(--drx-white);padding:4rem 0; }
+.area-city-pill {
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--drx-light);border:1px solid rgba(58,110,168,.15);
+  color:var(--drx-navy);text-decoration:none;
+  font-size:.82rem;font-weight:600;
+  padding:.5rem 1rem;border-radius:50px;
+  transition:var(--transition);margin:.25rem;
+}
+.area-city-pill:hover { background:var(--drx-blue);color:#fff;border-color:var(--drx-blue); }
+.area-city-pill i { font-size:.7rem;color:var(--drx-blue); }
+.area-city-pill:hover i { color:#fff; }
+
+/* FAQ */
+.svc-faq { background:#f0f5fa;padding:5rem 0; }
+.drx-accordion .accordion-item {
+  border:1px solid rgba(13,27,46,.08);border-radius:10px!important;
+  margin-bottom:.75rem;overflow:hidden;
+}
+.drx-accordion .accordion-button {
+  font-family:"Barlow Condensed",sans-serif;font-size:1.1rem;font-weight:700;
+  color:var(--drx-navy);background:#fff;padding:1.2rem 1.4rem;
+  box-shadow:none!important;
+}
+.drx-accordion .accordion-button:not(.collapsed) { color:var(--drx-blue);background:#fff; }
+.drx-accordion .accordion-button::after {
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233a6ea8'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.drx-accordion .accordion-body {
+  font-size:.9rem;color:#5a6a7e;line-height:1.8;
+  background:#fff;padding:0 1.4rem 1.4rem;
+}
+
+/* RELATED SERVICES / INTERNAL LINKS */
+.svc-related { background:var(--drx-white);padding:3rem 0; }
+.related-card {
+  background:var(--drx-light);border:1px solid rgba(58,110,168,.15);
+  border-radius:12px;padding:1.4rem;text-decoration:none;
+  display:flex;align-items:center;gap:1rem;
+  transition:var(--transition);height:100%;
+}
+.related-card:hover { background:var(--drx-blue);border-color:var(--drx-blue);transform:translateY(-3px); }
+.related-icon {
+  width:46px;height:46px;border-radius:10px;flex-shrink:0;
+  background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;color:var(--drx-steel);
+  transition:var(--transition);
+}
+.related-card:hover .related-icon { background:rgba(255,255,255,.15);color:#fff; }
+.related-card .rc-title { font-size:.9rem;font-weight:700;color:var(--drx-navy);margin-bottom:.1rem;transition:color .2s; }
+.related-card:hover .rc-title { color:#fff; }
+.related-card .rc-sub { font-size:.75rem;color:#6b7a8d;transition:color .2s; }
+.related-card:hover .rc-sub { color:rgba(255,255,255,.7); }
+
+/* CTA */
+.svc-cta {
+  background:linear-gradient(135deg,var(--drx-steel) 0%,var(--drx-blue) 100%);
+  padding:5rem 0;position:relative;overflow:hidden;
+}
+.svc-cta::before {
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(255,255,255,.07) 0%,transparent 65%);
+}
+.svc-cta .cta-title {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:clamp(2rem,5vw,3.2rem);font-weight:800;color:#fff;line-height:1.1;
+}
+
+/* FORM */
+.svc-form { background:#f0f5fa;padding:5rem 0; }
+.svc-contact-card { background:#fff;border-radius:16px;box-shadow:var(--drx-shadow-lg);overflow:hidden; }
+.svc-contact-left {
+  background:linear-gradient(160deg,var(--drx-navy) 0%,var(--drx-deep) 100%);
+  padding:3rem 2.4rem;position:relative;overflow:hidden;
+}
+.svc-contact-left::before {
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,transparent 0,transparent 18px,rgba(255,255,255,.015) 18px,rgba(255,255,255,.015) 19px);
+}
+.svc-ci-item { display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem;position:relative;z-index:1; }
+.svc-ci-icon {
+  width:42px;height:42px;border-radius:10px;flex-shrink:0;
+  background:rgba(58,110,168,.25);border:1px solid rgba(58,110,168,.35);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;color:var(--drx-silver);
+}
+.svc-ci-label { font-size:.72rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em; }
+.svc-ci-value { font-size:.92rem;color:#fff;font-weight:500; }
+.svc-contact-right { padding:3rem 2.4rem; }
+.svc-btn-submit {
+  width:100%;background:linear-gradient(135deg,var(--drx-steel),var(--drx-blue));
+  color:#fff;border:none;padding:1rem;border-radius:50px;
+  font-family:"Barlow Condensed",sans-serif;font-size:1.05rem;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;
+  box-shadow:0 6px 24px rgba(58,110,168,.35);transition:var(--transition);cursor:pointer;
+}
+.svc-btn-submit:hover { transform:translateY(-2px);background:linear-gradient(135deg,rgb(58,113,208),rgb(29,157,255));box-shadow:0 10px 36px rgba(58,110,168,.5); }
+
+/* RESPONSIVE */
+@media (max-width:991.98px) {
+  .svc-contact-left,.svc-contact-right { padding:2rem 1.6rem; }
+  .process-step { flex-direction:column;gap:.8rem; }
+}
+@media (max-width:767.98px) {
+  .svc-ba-visual { height:220px; }
+  .svc-intro,.svc-benefits,.svc-process,.svc-ba,.svc-why,.svc-areas,.svc-faq,.svc-related,.svc-cta,.svc-form { padding:3.5rem 0; }
+}
