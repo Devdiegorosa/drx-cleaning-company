@@ -20,21 +20,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Contact DRX Cleaning Company | Orlando FL | (321) 315-8595</title>
+    <title>Get a Free Quote | DRX Cleaning Orlando FL</title>
     <meta
       name="description"
-      content="Contact DRX Cleaning Company in Orlando, FL. Call, text or WhatsApp (321) 315-8595. Request a free carpet cleaning quote — same-day available, no obligation."
+      content="Contact DRX Cleaning for a free quote in Orlando & Central Florida. Carpet, sofa & mattress cleaning. Call or text (321) 315-8595 today."
     />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Contact DRX Cleaning Company | Orlando FL"
+      content="Get a Free Quote | DRX Cleaning Orlando FL"
     />
     <meta
       property="og:description"
-      content="Call, text or WhatsApp (321) 315-8595. Free quote, same-day available, 100% satisfaction guaranteed."
+      content="Contact DRX Cleaning for a free quote in Orlando & Central Florida. Carpet, sofa & mattress cleaning. Call or text (321) 315-8595 today."
     />
     <meta
       property="og:image"
@@ -154,7 +154,27 @@
     /></noscript>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/contact.css" />
-  </head>
+  
+  <style>
+    /* ── Mobile: replace video with static image for LCP ── */
+    @media (max-width: 991.98px) {
+      .hero-video { display: none !important; }
+      #hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("imagens/carpet-af.webp") center center / cover no-repeat;
+        opacity: 0.25;
+        z-index: 0;
+        pointer-events: none;
+      }
+    }
+    @media (min-width: 992px) {
+      /* Desktop: video shows normally, no pseudo-element needed */
+      #hero::after { display: none; }
+    }
+  </style>
+</head>
   <body>
     <!-- NAVBAR -->
     <nav

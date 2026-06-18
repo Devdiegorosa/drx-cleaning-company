@@ -20,10 +20,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Carpet Cleaning Services Orlando FL | DRX Cleaning</title>
+    <title>Professional Cleaning Services | DRX Orlando</title>
     <meta
       name="description"
-      content="Explore DRX Cleaning Company services in Orlando, FL: carpet cleaning, stain removal, upholstery cleaning, mattress sanitization, deep cleaning and commercial carpet cleaning. Eco-friendly and same-day available."
+      content="Carpet, upholstery, mattress, pet stain & commercial cleaning in Orlando FL. Licensed, insured & eco-friendly. Free quote: (321) 315-8595."
     />
     <meta
       name="keywords"
@@ -43,11 +43,11 @@
     <meta property="og:site_name" content="DRX Cleaning Company" />
     <meta
       property="og:title"
-      content="Carpet Cleaning Services Orlando FL | DRX Cleaning"
+      content="Professional Cleaning Services | DRX Orlando"
     />
     <meta
       property="og:description"
-      content="Explore DRX Cleaning Company services in Orlando, FL: carpet cleaning, stain removal, upholstery cleaning, mattress sanitization, deep cleaning and commercial carpet cleaning. Eco-friendly and same-day available."
+      content="Carpet, upholstery, mattress, pet stain & commercial cleaning in Orlando FL. Licensed, insured & eco-friendly. Free quote: (321) 315-8595."
     />
     <meta
       property="og:image"
@@ -63,11 +63,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Carpet Cleaning Services Orlando FL | DRX Cleaning"
+      content="Professional Cleaning Services | DRX Orlando"
     />
     <meta
       name="twitter:description"
-      content="Explore DRX Cleaning Company services in Orlando, FL: carpet cleaning, stain removal, upholstery cleaning, mattress sanitization, deep cleaning and commercial carpet cleaning. Eco-friendly and same-day available."
+      content="Carpet, upholstery, mattress, pet stain & commercial cleaning in Orlando FL. Licensed, insured & eco-friendly. Free quote: (321) 315-8595."
     />
     <meta
       name="twitter:image"
@@ -323,7 +323,27 @@
     /></noscript>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/services.css" />
-  </head>
+  
+  <style>
+    /* ── Mobile: replace video with static image for LCP ── */
+    @media (max-width: 991.98px) {
+      .hero-video { display: none !important; }
+      #hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("imagens/carpet-af.webp") center center / cover no-repeat;
+        opacity: 0.25;
+        z-index: 0;
+        pointer-events: none;
+      }
+    }
+    @media (min-width: 992px) {
+      /* Desktop: video shows normally, no pseudo-element needed */
+      #hero::after { display: none; }
+    }
+  </style>
+</head>
   <body>
     <!-- ============================================================
        NAVBAR — idêntica ao index.html
@@ -550,7 +570,7 @@
                   </div>
                 </div>
                 <div class="sc-body">
-                  <h3 itemprop="name"><a href="carpet-cleaning.html" title="Carpet Cleaning" style="color:inherit;text-decoration:none">Carpet Cleaning</a></h3>
+                  <h3 itemprop="name">Carpet Cleaning</h3>
                   <p itemprop="description">
                     Hot-water extraction removes embedded dirt, allergens,
                     bacteria, and deep stains from all carpet types. Results you
@@ -579,19 +599,11 @@
                     </li>
                   </ul>
                   <a
-                    href="carpet-cleaning.html"
-                    class="sc-cta me-3"
-                    title="Carpet Cleaning"
-                    aria-label="Learn more about carpet cleaning"
-                  >
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                  <a
                     href="contact.html#quoteForm"
                     class="sc-cta"
                     aria-label="Book carpet cleaning service"
                   >
-                    Book Now <i class="bi bi-calendar2-check"></i>
+                    Book this service <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -629,7 +641,7 @@
                   </div>
                 </div>
                 <div class="sc-body">
-                  <h3 itemprop="name"><a href="pet-odor-stain-removal.html" title="Stain Removal" style="color:inherit;text-decoration:none">Stain Removal</a></h3>
+                  <h3 itemprop="name">Stain Removal</h3>
                   <p itemprop="description">
                     Professional pre-treatment eliminates wine, pet stains,
                     coffee, grease, and tough spots that regular cleaning and
@@ -657,19 +669,11 @@
                     </li>
                   </ul>
                   <a
-                    href="pet-odor-stain-removal.html"
-                    class="sc-cta me-3"
-                    title="Stain Removal"
-                    aria-label="Learn more about stain removal"
-                  >
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                  <a
                     href="contact.html#quoteForm"
                     class="sc-cta"
                     aria-label="Book stain removal service"
                   >
-                    Book Now <i class="bi bi-calendar2-check"></i>
+                    Book this service <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -699,7 +703,7 @@
                   </div>
                 </div>
                 <div class="sc-body">
-                  <h3 itemprop="name"><a href="upholstery-cleaning.html" title="Upholstery Cleaning" style="color:inherit;text-decoration:none">Upholstery Cleaning</a></h3>
+                  <h3 itemprop="name">Upholstery Cleaning</h3>
                   <p itemprop="description">
                     Fabric-safe deep cleaning for sofas, sectionals, recliners,
                     and dining chairs. Your furniture holds more bacteria than
@@ -728,19 +732,11 @@
                     </li>
                   </ul>
                   <a
-                    href="upholstery-cleaning.html"
-                    class="sc-cta me-3"
-                    title="Upholstery Cleaning"
-                    aria-label="Learn more about upholstery cleaning"
-                  >
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                  <a
                     href="contact.html#quoteForm"
                     class="sc-cta"
                     aria-label="Book upholstery cleaning service"
                   >
-                    Book Now <i class="bi bi-calendar2-check"></i>
+                    Book this service <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -778,7 +774,7 @@
                   </div>
                 </div>
                 <div class="sc-body">
-                  <h3 itemprop="name"><a href="carpet-cleaning.html" title="Deep Cleaning" style="color:inherit;text-decoration:none">Deep Cleaning</a></h3>
+                  <h3 itemprop="name">Deep Cleaning</h3>
                   <p itemprop="description">
                     Full steam extraction with UV sanitization light treatment.
                     Eliminates 99% of bacteria, dust mites, mold spores, and
@@ -807,19 +803,11 @@
                     </li>
                   </ul>
                   <a
-                    href="carpet-cleaning.html"
-                    class="sc-cta me-3"
-                    title="Deep Cleaning"
-                    aria-label="Learn more about deep cleaning"
-                  >
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                  <a
                     href="contact.html#quoteForm"
                     class="sc-cta"
                     aria-label="Book deep cleaning service"
                   >
-                    Book Now <i class="bi bi-calendar2-check"></i>
+                    Book this service <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -855,7 +843,7 @@
                   <div class="sc-icon-wrap"><i class="bi bi-building"></i></div>
                 </div>
                 <div class="sc-body">
-                  <h3 itemprop="name"><a href="commercial-carpet-cleaning.html" title="Commercial Cleaning" style="color:inherit;text-decoration:none">Commercial Cleaning</a></h3>
+                  <h3 itemprop="name">Commercial Cleaning</h3>
                   <p itemprop="description">
                     Office buildings, retail stores, hotels, and commercial
                     spaces across Orlando. Flexible after-hours scheduling keeps
@@ -884,19 +872,11 @@
                     </li>
                   </ul>
                   <a
-                    href="commercial-carpet-cleaning.html"
-                    class="sc-cta me-3"
-                    title="Commercial Cleaning"
-                    aria-label="Learn more about commercial cleaning"
-                  >
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                  <a
                     href="contact.html#quoteForm"
                     class="sc-cta"
                     aria-label="Book commercial cleaning service"
                   >
-                    Book Now <i class="bi bi-calendar2-check"></i>
+                    Book this service <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -926,7 +906,7 @@
                   </div>
                 </div>
                 <div class="sc-body">
-                  <h3 itemprop="name"><a href="mattress-cleaning.html" title="Mattress Sanitization" style="color:inherit;text-decoration:none">Mattress Sanitization</a></h3>
+                  <h3 itemprop="name">Mattress Sanitization</h3>
                   <p itemprop="description">
                     You spend 8 hours a night breathing what lives in your
                     mattress. Our UV + deep extraction treatment eliminates dust
@@ -955,19 +935,11 @@
                     </li>
                   </ul>
                   <a
-                    href="mattress-cleaning.html"
-                    class="sc-cta me-3"
-                    title="Mattress Sanitization"
-                    aria-label="Learn more about mattress cleaning"
-                  >
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                  <a
                     href="contact.html#quoteForm"
                     class="sc-cta"
                     aria-label="Book mattress sanitization service"
                   >
-                    Book Now <i class="bi bi-calendar2-check"></i>
+                    Book this service <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -1604,7 +1576,7 @@
                 ><br /><br />
               </li>
             </ul>
-            <h6 class="legal">Legal</h6>
+            <p class="fw-bold mb-2 mt-3" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55)">Legal</p>
             <ul>
               <li>
                 <a href="privacy.html"

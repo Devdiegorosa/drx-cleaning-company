@@ -20,10 +20,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>About DRX Cleaning Company | Orlando Carpet Cleaners</title>
+    <title>About DRX Cleaning | Orlando, FL</title>
     <meta
       name="description"
-      content="Learn about DRX Cleaning Company, Orlando’s trusted carpet cleaning specialists. Licensed, insured, eco-friendly and committed to professional cleaning results across Central Florida."
+      content="Learn about DRX Cleaning — Orlando's trusted carpet & upholstery specialists. Licensed, insured & eco-friendly. Serving all of Central Florida."
     />
     <meta
       name="keywords"
@@ -43,11 +43,11 @@
     <meta property="og:site_name" content="DRX Cleaning Company" />
     <meta
       property="og:title"
-      content="About DRX Cleaning Company | Orlando Carpet Cleaners"
+      content="About DRX Cleaning | Orlando, FL"
     />
     <meta
       property="og:description"
-      content="Learn about DRX Cleaning Company, Orlando’s trusted carpet cleaning specialists. Licensed, insured, eco-friendly and committed to professional cleaning results across Central Florida."
+      content="Learn about DRX Cleaning — Orlando's trusted carpet & upholstery specialists. Licensed, insured & eco-friendly. Serving all of Central Florida."
     />
     <meta
       property="og:image"
@@ -63,11 +63,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="About DRX Cleaning Company | Orlando Carpet Cleaners"
+      content="About DRX Cleaning | Orlando, FL"
     />
     <meta
       name="twitter:description"
-      content="Learn about DRX Cleaning Company, Orlando’s trusted carpet cleaning specialists. Licensed, insured, eco-friendly and committed to professional cleaning results across Central Florida."
+      content="Learn about DRX Cleaning — Orlando's trusted carpet & upholstery specialists. Licensed, insured & eco-friendly. Serving all of Central Florida."
     />
     <meta
       name="twitter:image"
@@ -275,7 +275,18 @@
     /></noscript>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/about.css" />
-  </head>
+    <style>
+    @media (max-width: 991.98px) {
+      .hero-video { display: none !important; }
+      #hero::after {
+        content: "";position:absolute;inset:0;
+        background: url("imagens/carpet-af.webp") center center / cover no-repeat;
+        opacity: 0.25;z-index: 0;pointer-events: none;
+      }
+    }
+    @media (min-width: 992px) { #hero::after { display: none; } }
+  </style>
+</head>
   <body>
     <!-- ============================================================
        NAVBAR — idêntica ao index.html / services

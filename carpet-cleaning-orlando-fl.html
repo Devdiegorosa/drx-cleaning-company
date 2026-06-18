@@ -17,10 +17,10 @@
     </script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Carpet Cleaning Orlando FL | DRX Cleaning Company</title>
+    <title>Carpet Cleaning in Orlando FL | DRX</title>
     <meta
       name="description"
-      content="Professional carpet cleaning in Orlando, FL by DRX Cleaning. Serving Downtown, Lake Nona, MetroWest, Dr. Phillips, Baldwin Park & more. Eco-friendly, licensed, insured. Call (321) 315-8595."
+      content="DRX Cleaning provides carpet cleaning in Orlando FL. Serving Downtown, MetroWest & Baldwin Park. Licensed & eco-friendly. (321) 315-8595."
     />
     <meta
       name="keywords"
@@ -37,11 +37,11 @@
     <meta property="og:site_name" content="DRX Cleaning Company" />
     <meta
       property="og:title"
-      content="Carpet Cleaning Orlando FL | DRX Cleaning Company"
+      content="Carpet Cleaning in Orlando FL | DRX"
     />
     <meta
       property="og:description"
-      content="Professional carpet cleaning in Orlando, FL by DRX Cleaning. Serving Downtown, Lake Nona, MetroWest, Dr. Phillips, Baldwin Park & more. Eco-friendly, licensed, insured. Call (321) 315-8595."
+      content="DRX Cleaning provides carpet cleaning in Orlando FL. Serving Downtown, MetroWest & Baldwin Park. Licensed & eco-friendly. (321) 315-8595."
     />
     <meta
       property="og:image"
@@ -59,11 +59,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Carpet Cleaning Orlando FL | DRX Cleaning Company"
+      content="Carpet Cleaning in Orlando FL | DRX"
     />
     <meta
       name="twitter:description"
-      content="Professional carpet cleaning in Orlando, FL by DRX Cleaning. Serving Downtown, Lake Nona, MetroWest, Dr. Phillips, Baldwin Park & more. Eco-friendly, licensed, insured. Call (321) 315-8595."
+      content="DRX Cleaning provides carpet cleaning in Orlando FL. Serving Downtown, MetroWest & Baldwin Park. Licensed & eco-friendly. (321) 315-8595."
     />
     <meta
       name="twitter:image"
@@ -265,7 +265,27 @@
     /></noscript>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/city.css" />
-  </head>
+  
+  <style>
+    /* ── Mobile: replace video with static image for LCP ── */
+    @media (max-width: 991.98px) {
+      .hero-video { display: none !important; }
+      #hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("imagens/carpet-af.webp") center center / cover no-repeat;
+        opacity: 0.25;
+        z-index: 0;
+        pointer-events: none;
+      }
+    }
+    @media (min-width: 992px) {
+      /* Desktop: video shows normally, no pseudo-element needed */
+      #hero::after { display: none; }
+    }
+  </style>
+</head>
   <body>
     <div class="page-loader">
       <div class="loader-content">
@@ -349,7 +369,7 @@
               <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item">
-                  <a href="carpet-cleaning.html" title="Professional Carpet Cleaning">Carpet Cleaning</a>
+                  <a href="carpet-cleaning.html">Carpet Cleaning</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   Orlando, FL
@@ -501,7 +521,7 @@
                 <div>
                   <i class="bi bi-check-circle-fill"></i>
                   <a
-                    href="carpet-cleaning.html" title="Professional Carpet Cleaning"
+                    href="carpet-cleaning.html"
                     style="color: inherit; text-decoration: none"
                     >Carpet deep cleaning</a
                   >
@@ -509,7 +529,7 @@
                 <div>
                   <i class="bi bi-check-circle-fill"></i>
                   <a
-                    href="upholstery-cleaning.html" title="Upholstery &amp; Sofa Cleaning"
+                    href="upholstery-cleaning.html"
                     style="color: inherit; text-decoration: none"
                     >Sofa and upholstery cleaning</a
                   >
@@ -517,7 +537,7 @@
                 <div>
                   <i class="bi bi-check-circle-fill"></i>
                   <a
-                    href="mattress-cleaning.html" title="Mattress Cleaning &amp; Sanitization"
+                    href="mattress-cleaning.html"
                     style="color: inherit; text-decoration: none"
                     >Mattress sanitization</a
                   >
@@ -525,7 +545,7 @@
                 <div>
                   <i class="bi bi-check-circle-fill"></i>
                   <a
-                    href="pet-odor-stain-removal.html" title="Pet Odor &amp; Stain Removal"
+                    href="pet-odor-stain-removal.html"
                     style="color: inherit; text-decoration: none"
                     >Pet stain and odor removal</a
                   >
@@ -533,7 +553,7 @@
                 <div>
                   <i class="bi bi-check-circle-fill"></i>
                   <a
-                    href="commercial-carpet-cleaning.html" title="Commercial Carpet Cleaning"
+                    href="commercial-carpet-cleaning.html"
                     style="color: inherit; text-decoration: none"
                     >Commercial carpet cleaning</a
                   >
@@ -574,7 +594,7 @@
               </div>
               <h5>
                 <a
-                  href="carpet-cleaning.html" title="Professional Carpet Cleaning"
+                  href="carpet-cleaning.html"
                   style="color: inherit; text-decoration: none"
                   >Carpet Cleaning</a
                 >
@@ -593,7 +613,7 @@
               </div>
               <h5>
                 <a
-                  href="upholstery-cleaning.html" title="Upholstery &amp; Sofa Cleaning"
+                  href="upholstery-cleaning.html"
                   style="color: inherit; text-decoration: none"
                   >Upholstery Cleaning</a
                 >
@@ -612,7 +632,7 @@
               </div>
               <h5>
                 <a
-                  href="mattress-cleaning.html" title="Mattress Cleaning &amp; Sanitization"
+                  href="mattress-cleaning.html"
                   style="color: inherit; text-decoration: none"
                   >Mattress Sanitization</a
                 >
@@ -631,7 +651,7 @@
               </div>
               <h5>
                 <a
-                  href="pet-odor-stain-removal.html" title="Pet Odor &amp; Stain Removal"
+                  href="pet-odor-stain-removal.html"
                   style="color: inherit; text-decoration: none"
                   >Pet Odor &amp; Stain Removal</a
                 >
@@ -650,7 +670,7 @@
               </div>
               <h5>
                 <a
-                  href="commercial-carpet-cleaning.html" title="Commercial Carpet Cleaning"
+                  href="commercial-carpet-cleaning.html"
                   style="color: inherit; text-decoration: none"
                   >Commercial Cleaning</a
                 >
@@ -1455,16 +1475,16 @@
           <div class="col-6 col-lg-2 footer-col">
             <p class="fw-bold mb-2" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55)">Services</p>
             <ul>
-              <li><a href="carpet-cleaning.html" title="Professional Carpet Cleaning">Carpet Cleaning</a></li>
+              <li><a href="carpet-cleaning.html">Carpet Cleaning</a></li>
               <li>
-                <a href="upholstery-cleaning.html" title="Upholstery &amp; Sofa Cleaning">Upholstery Cleaning</a>
+                <a href="upholstery-cleaning.html">Upholstery Cleaning</a>
               </li>
-              <li><a href="mattress-cleaning.html" title="Mattress Cleaning &amp; Sanitization">Mattress Cleaning</a></li>
+              <li><a href="mattress-cleaning.html">Mattress Cleaning</a></li>
               <li>
-                <a href="pet-odor-stain-removal.html" title="Pet Odor &amp; Stain Removal">Pet Odor Removal</a>
+                <a href="pet-odor-stain-removal.html">Pet Odor Removal</a>
               </li>
               <li>
-                <a href="commercial-carpet-cleaning.html" title="Commercial Carpet Cleaning"
+                <a href="commercial-carpet-cleaning.html"
                   >Commercial Cleaning</a
                 >
               </li>

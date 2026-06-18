@@ -17,10 +17,10 @@
     </script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Pet Odor & Stain Removal Orlando, FL | DRX Cleaning Company</title>
+    <title>Pet Odor & Stain Removal | DRX Orlando FL</title>
     <meta
       name="description"
-      content="Professional pet odor and stain removal in Orlando and Central Florida. DRX eliminates pet urine, feces stains, and persistent pet odors from carpets, upholstery, and mattresses using enzyme treatment. Call (321) 315-8595."
+      content="Enzyme-based pet odor & stain removal in Orlando FL. Permanently eliminates pet urine odors from carpet & upholstery. Call (321) 315-8595."
     />
     <meta name="author" content="DRX Cleaning Company" />
     <meta
@@ -32,11 +32,11 @@
     <meta property="og:site_name" content="DRX Cleaning Company" />
     <meta
       property="og:title"
-      content="Pet Odor & Stain Removal Orlando, FL | DRX Cleaning Company"
+      content="Pet Odor & Stain Removal | DRX Orlando FL"
     />
     <meta
       property="og:description"
-      content="Professional pet odor and stain removal in Orlando and Central Florida. DRX eliminates pet urine, feces stains, and persistent pet odors from carpets, upholstery, and mattresses using enzyme treatment. Call (321) 315-8595."
+      content="Enzyme-based pet odor & stain removal in Orlando FL. Permanently eliminates pet urine odors from carpet & upholstery. Call (321) 315-8595."
     />
     <meta
       property="og:image"
@@ -50,11 +50,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Pet Odor & Stain Removal Orlando, FL | DRX Cleaning Company"
+      content="Pet Odor & Stain Removal | DRX Orlando FL"
     />
     <meta
       name="twitter:description"
-      content="Professional pet odor and stain removal in Orlando and Central Florida. DRX eliminates pet urine, feces stains, and persistent pet odors from carpets, upholstery, and mattresses using enzyme treatment. Call (321) 315-8595."
+      content="Enzyme-based pet odor & stain removal in Orlando FL. Permanently eliminates pet urine odors from carpet & upholstery. Call (321) 315-8595."
     />
     <meta
       name="twitter:image"
@@ -238,7 +238,27 @@
     /></noscript>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/service-pages.css" />
-  </head>
+  
+  <style>
+    /* ── Mobile: replace video with static image for LCP ── */
+    @media (max-width: 991.98px) {
+      .hero-video { display: none !important; }
+      #hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("imagens/carpet-af.webp") center center / cover no-repeat;
+        opacity: 0.25;
+        z-index: 0;
+        pointer-events: none;
+      }
+    }
+    @media (min-width: 992px) {
+      /* Desktop: video shows normally, no pseudo-element needed */
+      #hero::after { display: none; }
+    }
+  </style>
+</head>
   <body>
     <div class="page-loader">
       <div class="loader-content">
@@ -928,7 +948,7 @@
         </h2>
         <div class="row g-3">
           <div class="col-sm-6 col-lg-3 reveal">
-            <a href="carpet-cleaning.html" title="Professional Carpet Cleaning" class="related-card"
+            <a href="carpet-cleaning.html" class="related-card"
               ><div class="related-icon"><i class="bi bi-house-fill"></i></div>
               <div>
                 <div class="rc-title">Carpet Cleaning</div>
@@ -937,7 +957,7 @@
             >
           </div>
           <div class="col-sm-6 col-lg-3 reveal">
-            <a href="upholstery-cleaning.html" title="Upholstery &amp; Sofa Cleaning" class="related-card"
+            <a href="upholstery-cleaning.html" class="related-card"
               ><div class="related-icon">
                 <i class="bi bi-archive-fill"></i>
               </div>
@@ -948,7 +968,7 @@
             >
           </div>
           <div class="col-sm-6 col-lg-3 reveal">
-            <a href="mattress-cleaning.html" title="Mattress Cleaning &amp; Sanitization" class="related-card"
+            <a href="mattress-cleaning.html" class="related-card"
               ><div class="related-icon"><i class="bi bi-moon-fill"></i></div>
               <div>
                 <div class="rc-title">Mattress Cleaning</div>
@@ -957,7 +977,7 @@
             >
           </div>
           <div class="col-sm-6 col-lg-3 reveal">
-            <a href="commercial-carpet-cleaning.html" title="Commercial Carpet Cleaning" class="related-card"
+            <a href="commercial-carpet-cleaning.html" class="related-card"
               ><div class="related-icon"><i class="bi bi-building"></i></div>
               <div>
                 <div class="rc-title">Commercial Cleaning</div>
@@ -1393,16 +1413,16 @@
           <div class="col-6 col-lg-2 footer-col">
             <p class="fw-bold mb-2" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55)">Services</p>
             <ul>
-              <li><a href="carpet-cleaning.html" title="Professional Carpet Cleaning">Carpet Cleaning</a></li>
+              <li><a href="carpet-cleaning.html">Carpet Cleaning</a></li>
               <li>
-                <a href="upholstery-cleaning.html" title="Upholstery &amp; Sofa Cleaning">Upholstery Cleaning</a>
+                <a href="upholstery-cleaning.html">Upholstery Cleaning</a>
               </li>
-              <li><a href="mattress-cleaning.html" title="Mattress Cleaning &amp; Sanitization">Mattress Cleaning</a></li>
+              <li><a href="mattress-cleaning.html">Mattress Cleaning</a></li>
               <li>
-                <a href="pet-odor-stain-removal.html" title="Pet Odor &amp; Stain Removal">Pet Odor Removal</a>
+                <a href="pet-odor-stain-removal.html">Pet Odor Removal</a>
               </li>
               <li>
-                <a href="commercial-carpet-cleaning.html" title="Commercial Carpet Cleaning"
+                <a href="commercial-carpet-cleaning.html"
                   >Commercial Cleaning</a
                 >
               </li>
