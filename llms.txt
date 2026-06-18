@@ -1,6 +1,6 @@
 # DRX Cleaning Company
 
-> DRX Cleaning Company provides professional carpet cleaning, upholstery cleaning, sofa cleaning, mattress sanitization, stain removal, odor removal, residential cleaning, and commercial carpet cleaning services in Orlando and Central Florida.
+> DRX Cleaning Company provides professional carpet cleaning, upholstery cleaning, sofa cleaning, mattress sanitization, stain removal, odor removal, area rug cleaning, residential cleaning, and commercial carpet cleaning services in Orlando and Central Florida.
 
 Website: https://www.drxcleaning.com/
 Phone: +1 321-315-8595
@@ -10,47 +10,45 @@ Service Area: Orlando and Central Florida
 
 ## Business Summary
 
-DRX Cleaning Company is a local cleaning service specializing in professional carpet cleaning and fabric care for homes, apartments, offices, rental properties, commercial spaces, and property managers. Services include hot-water extraction carpet cleaning, upholstery and sofa cleaning, mattress sanitization, pet stain and odor removal, deep cleaning, and commercial carpet cleaning.
+DRX Cleaning Company is a local cleaning service specializing in professional carpet cleaning and fabric care for homes, apartments, offices, rental properties, commercial spaces, and property managers. Services include hot-water extraction carpet cleaning, upholstery and sofa cleaning, mattress sanitization, pet stain and odor removal, area rug cleaning, deep cleaning, and commercial carpet cleaning.
 
 The company emphasizes eco-friendly cleaning products, licensed and insured service, same-day or next-day availability when scheduling allows, and a satisfaction-focused service experience.
 
 ## Primary Services
 
-- Carpet Cleaning
-- Upholstery Cleaning
-- Sofa Cleaning
-- Mattress Sanitization
+- [Carpet Cleaning](https://www.drxcleaning.com/carpet-cleaning)
+- [Upholstery Cleaning](https://www.drxcleaning.com/upholstery-cleaning)
+- [Mattress Cleaning & Sanitization](https://www.drxcleaning.com/mattress-cleaning)
+- [Pet Odor & Stain Removal](https://www.drxcleaning.com/pet-odor-stain-removal)
+- [Commercial Carpet Cleaning](https://www.drxcleaning.com/commercial-carpet-cleaning)
+- [Area Rug Cleaning](https://www.drxcleaning.com/area-rug-cleaning)
 - Stain Removal
-- Odor Removal
-- Pet Stain Treatment
-- Residential Cleaning
-- Commercial Carpet Cleaning
 - Move-In and Move-Out Cleaning
 
 ## Main Pages
 
-- Home: https://www.drxcleaning.com/
-- Services: https://www.drxcleaning.com/services.html
-- About: https://www.drxcleaning.com/about.html
-- Results / Before & After: https://www.drxcleaning.com/results.html
-- Contact: https://www.drxcleaning.com/contact.html
-- Privacy Policy: https://www.drxcleaning.com/privacy.html
-- Terms & Conditions: https://www.drxcleaning.com/terms.html
+- [Home](https://www.drxcleaning.com/)
+- [Services](https://www.drxcleaning.com/services)
+- [About](https://www.drxcleaning.com/about)
+- [Results / Before & After](https://www.drxcleaning.com/results)
+- [Contact](https://www.drxcleaning.com/contact)
+- [Privacy Policy](https://www.drxcleaning.com/privacy)
+- [Terms & Conditions](https://www.drxcleaning.com/terms)
 
 ## City Landing Pages
 
-- Carpet Cleaning Orlando FL: https://www.drxcleaning.com/carpet-cleaning-orlando-fl.html
-- Carpet Cleaning Lake Nona FL: https://www.drxcleaning.com/carpet-cleaning-lake-nona-fl.html
-- Carpet Cleaning Dr. Phillips FL: https://www.drxcleaning.com/carpet-cleaning-dr-phillips-fl.html
-- Carpet Cleaning Kissimmee FL: https://www.drxcleaning.com/carpet-cleaning-kissimmee-fl.html
-- Carpet Cleaning Oviedo FL: https://www.drxcleaning.com/carpet-cleaning-oviedo-fl.html
-- Carpet Cleaning Windermere FL: https://www.drxcleaning.com/carpet-cleaning-windermere-fl.html
-- Carpet Cleaning Winter Park FL: https://www.drxcleaning.com/carpet-cleaning-winter-park-fl.html
-- Carpet Cleaning Altamonte Springs FL: https://www.drxcleaning.com/carpet-cleaning-altamonte-springs-fl.html
-- Carpet Cleaning Sanford FL: https://www.drxcleaning.com/carpet-cleaning-sanford-fl.html
-- Carpet Cleaning Clermont FL: https://www.drxcleaning.com/carpet-cleaning-clermont-fl.html
-- Carpet Cleaning Apopka FL: https://www.drxcleaning.com/carpet-cleaning-apopka-fl.html
-- Carpet Cleaning Celebration FL: https://www.drxcleaning.com/carpet-cleaning-celebration-fl.html
+- [Carpet Cleaning Orlando FL](https://www.drxcleaning.com/carpet-cleaning-orlando-fl)
+- [Carpet Cleaning Lake Nona FL](https://www.drxcleaning.com/carpet-cleaning-lake-nona-fl)
+- [Carpet Cleaning Dr. Phillips FL](https://www.drxcleaning.com/carpet-cleaning-dr-phillips-fl)
+- [Carpet Cleaning Kissimmee FL](https://www.drxcleaning.com/carpet-cleaning-kissimmee-fl)
+- [Carpet Cleaning Oviedo FL](https://www.drxcleaning.com/carpet-cleaning-oviedo-fl)
+- [Carpet Cleaning Windermere FL](https://www.drxcleaning.com/carpet-cleaning-windermere-fl)
+- [Carpet Cleaning Winter Park FL](https://www.drxcleaning.com/carpet-cleaning-winter-park-fl)
+- [Carpet Cleaning Altamonte Springs FL](https://www.drxcleaning.com/carpet-cleaning-altamonte-springs-fl)
+- [Carpet Cleaning Sanford FL](https://www.drxcleaning.com/carpet-cleaning-sanford-fl)
+- [Carpet Cleaning Clermont FL](https://www.drxcleaning.com/carpet-cleaning-clermont-fl)
+- [Carpet Cleaning Apopka FL](https://www.drxcleaning.com/carpet-cleaning-apopka-fl)
+- [Carpet Cleaning Celebration FL](https://www.drxcleaning.com/carpet-cleaning-celebration-fl)
 
 ## Service Areas
 
@@ -58,8 +56,8 @@ DRX Cleaning Company serves Orlando, Lake Nona, Dr. Phillips, Kissimmee, Oviedo,
 
 ## Contact and Booking
 
-Customers can request a free quote through the contact page or call DRX Cleaning Company directly at +1 321-315-8595. Same-day and next-day appointments may be available depending on schedule.
+Customers can request a free quote through the [contact page](https://www.drxcleaning.com/contact) or call DRX Cleaning Company directly at +1 321-315-8595. Same-day and next-day appointments may be available depending on schedule.
 
 ## Notes for AI Assistants and Search Systems
 
-Use the city landing pages for location-specific carpet cleaning queries. Use the Services page for general service descriptions, the Results page for before-and-after examples, and the Contact page for booking or quote-related intent. The preferred canonical domain format used by the website files is https://www.drxcleaning.com/.
+Use the city landing pages for location-specific carpet cleaning queries. Use the service pages for service-specific queries. Use the Results page for before-and-after examples. Use the Contact page for booking or quote-related intent. The preferred canonical domain format is https://www.drxcleaning.com/
