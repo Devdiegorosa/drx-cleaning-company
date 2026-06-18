@@ -417,9 +417,16 @@
        HERO DA PÁGINA DE SERVIÇOS
   ============================================================ -->
     <header id="services-hero" role="banner">
-      <video poster="imagens/carpet-af.webp" class="hero-video" autoplay muted loop playsinline>
-        <source src="videos/cleaning-hero.webm" type="video/webm" />
-        <source src="videos/cleaning-hero.mp4" type="video/mp4" />
+      <video class="hero-video" poster="imagens/carpet-af.webp" autoplay muted loop playsinline>
+        <!-- Mobile: up to 767px -->
+        <source media="(max-width: 767px)" src="videos/cleaning-hero-mobile.webm" type="video/webm"/>
+        <source media="(max-width: 767px)" src="videos/cleaning-hero-mobile.mp4" type="video/mp4"/>
+        <!-- Tablet: 768px to 992px -->
+        <source media="(max-width: 992px)" src="videos/cleaning-hero-tablet.webm" type="video/webm"/>
+        <source media="(max-width: 992px)" src="videos/cleaning-hero-tablet.mp4" type="video/mp4"/>
+        <!-- Desktop: 993px and above -->
+        <source src="videos/cleaning-hero.webm" type="video/webm"/>
+        <source src="videos/cleaning-hero.mp4" type="video/mp4"/>
       </video>
       <div class="container">
         <!-- Breadcrumb — SEO + UX -->
@@ -441,7 +448,9 @@
               Services in Orlando
             </h1>
             <p class="hero-sub">
-              From deep carpet extraction to mattress sanitization — DRX delivers professional-grade cleaning using EPA-approved, eco-safe products. Licensed, insured, and satisfaction guaranteed.
+              From deep carpet extraction to mattress sanitization — DRX
+              delivers hospital-grade cleaning results using eco-safe products.
+              Licensed, insured, and satisfaction guaranteed.
             </p>
             <div class="hero-btns">
               <a href="contact.html#quoteForm" class="btn-primary-drx">

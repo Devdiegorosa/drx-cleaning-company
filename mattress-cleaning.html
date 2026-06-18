@@ -327,16 +327,16 @@
       </div>
     </nav>
     <section class="svc-hero" id="hero">
-      <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="imagens/mattress-af.webp"
-      >
-        <source src="videos/cleaning-hero.webm" type="video/webm" />
-        <source src="videos/cleaning-hero.mp4" type="video/mp4" />
+      <video class="hero-video" poster="imagens/carpet-af.webp" autoplay muted loop playsinline>
+        <!-- Mobile: up to 767px -->
+        <source media="(max-width: 767px)" src="videos/cleaning-hero-mobile.webm" type="video/webm"/>
+        <source media="(max-width: 767px)" src="videos/cleaning-hero-mobile.mp4" type="video/mp4"/>
+        <!-- Tablet: 768px to 992px -->
+        <source media="(max-width: 992px)" src="videos/cleaning-hero-tablet.webm" type="video/webm"/>
+        <source media="(max-width: 992px)" src="videos/cleaning-hero-tablet.mp4" type="video/mp4"/>
+        <!-- Desktop: 993px and above -->
+        <source src="videos/cleaning-hero.webm" type="video/webm"/>
+        <source src="videos/cleaning-hero.mp4" type="video/mp4"/>
       </video>
       <div class="container position-relative" style="z-index: 2">
         <nav aria-label="Breadcrumb" class="drx-breadcrumb">
