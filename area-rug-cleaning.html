@@ -279,23 +279,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     /></noscript>
     <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/service-pages.css" />
-    <style>
-    /* Only hide video on MOBILE (up to 767px) — show static image instead */
-    @media (max-width: 767px) {
-      .hero-video { display: none !important; }
-      #hero::after {
-        content:"";position:absolute;inset:0;
-        background:url("imagens/carpet-af.webp") center/cover no-repeat;
-        opacity:0.25;z-index:0;pointer-events:none;
-      }
-    }
-    /* Tablet (768-992px) and Desktop (993px+): video shows normally */
-    @media (min-width: 768px) { #hero::after { display:none; } }
-  </style>
-</head>
-  <body>
-    <div class="page-loader">
+    <link rel="stylesheet" href="styles/service-pages.cs class="page-loader">
       <div class="loader-content">
         <div class="loader-logo">
           <img
@@ -366,10 +350,8 @@
       <video class="hero-video" poster="imagens/carpet-af.webp" autoplay muted loop playsinline>
         <!-- Mobile: up to 767px -->
         <source media="(max-width: 767px)" src="videos/cleaning-hero-mobile.webm" type="video/webm"/>
-        <source media="(max-width: 767px)" src="videos/cleaning-hero-mobile.mp4" type="video/mp4"/>
         <!-- Tablet: 768px to 992px -->
         <source media="(max-width: 992px)" src="videos/cleaning-hero-tablet.webm" type="video/webm"/>
-        <source media="(max-width: 992px)" src="videos/cleaning-hero-tablet.mp4" type="video/mp4"/>
         <!-- Desktop: 993px and above -->
         <source src="videos/cleaning-hero.webm" type="video/webm"/>
         <source src="videos/cleaning-hero.mp4" type="video/mp4"/>
