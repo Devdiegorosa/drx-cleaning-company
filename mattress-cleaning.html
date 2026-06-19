@@ -241,7 +241,8 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/service-pages.css" />
     <style>
-    @media (max-width: 991.98px) {
+    /* Only hide video on MOBILE (up to 767px) — show static image instead */
+    @media (max-width: 767px) {
       .hero-video { display: none !important; }
       #hero::after {
         content:"";position:absolute;inset:0;
@@ -249,7 +250,8 @@
         opacity:0.25;z-index:0;pointer-events:none;
       }
     }
-    @media (min-width: 992px) { #hero::after { display:none; } }
+    /* Tablet (768-992px) and Desktop (993px+): video shows normally */
+    @media (min-width: 768px) { #hero::after { display:none; } }
   </style>
 </head>
   <body>
