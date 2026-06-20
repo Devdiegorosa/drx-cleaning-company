@@ -131,7 +131,7 @@ window.onRecaptchaApiLoad = function () {
   if (!container || !window.grecaptcha) return;
 
   window.RECAPTCHA_WIDGET_ID = grecaptcha.render("recaptchaContainer", {
-    sitekey: "6LeI5bQrAAAAAMGh1WhrRVG2pEQE1twUsfFdb_pF",
+    sitekey: "6Lel5bQrAAAAAMGh1WhrRVG2pEQE1twUsfFdb_pF",
     size: "invisible",
     badge: "bottomright",
     callback: function (token) {
