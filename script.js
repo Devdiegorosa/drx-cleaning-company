@@ -133,7 +133,7 @@ window.onRecaptchaApiLoad = function () {
   window.RECAPTCHA_WIDGET_ID = grecaptcha.render("recaptchaContainer", {
     sitekey: "6Lel5bQrAAAAAMGh1WhrRVG2pEQE1twUsfFdb_pF",
     size: "invisible",
-    badge: "bottomright",
+    badge: "inline",
     callback: function (token) {
       if (window.__recaptchaResolve) {
         window.__recaptchaResolve(token);
