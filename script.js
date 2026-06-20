@@ -53,15 +53,38 @@
 
       const originalHtml = btn.innerHTML;
 
-      const formData = new FormData(quoteForm);
-      const payload = Object.fromEntries(formData.entries());
-
-      payload.page = window.location.href;
-
       btn.disabled = true;
       btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i> Sending...';
 
       try {
+        // ── reCAPTCHA Invisible v2 — generate token before submitting ──
+        let recaptchaToken = "";
+
+        if (
+          window.grecaptcha &&
+          typeof grecaptcha.execute === "function" &&
+          window.RECAPTCHA_WIDGET_ID !== undefined
+        ) {
+          // Reset any previous token, then execute the invisible challenge
+          grecaptcha.reset(window.RECAPTCHA_WIDGET_ID);
+          recaptchaToken = await new Promise((resolve, reject) => {
+            try {
+              grecaptcha.execute(window.RECAPTCHA_WIDGET_ID);
+              // The callback set in data-callback resolves this promise
+              window.__recaptchaResolve = resolve;
+              window.__recaptchaReject = reject;
+            } catch (err) {
+              reject(err);
+            }
+          });
+        }
+
+        const formData = new FormData(quoteForm);
+        const payload = Object.fromEntries(formData.entries());
+
+        payload.page = window.location.href;
+        payload.recaptchaToken = recaptchaToken;
+
         const response = await fetch(
           "https://drx-cleaning-backend.vercel.app/api/quote",
           {
@@ -87,6 +110,9 @@
         btn.style.background = "linear-gradient(135deg,#1a7a45,#22a05a)";
 
         quoteForm.reset();
+        if (window.grecaptcha && window.RECAPTCHA_WIDGET_ID !== undefined) {
+          grecaptcha.reset(window.RECAPTCHA_WIDGET_ID);
+        }
       } catch (error) {
         console.error("Quote form error:", error);
 
@@ -98,6 +124,30 @@
     });
   }
 })();
+
+// reCAPTCHA Invisible v2 — render + callback wiring
+window.onRecaptchaApiLoad = function () {
+  const container = document.getElementById("recaptchaContainer");
+  if (!container || !window.grecaptcha) return;
+
+  window.RECAPTCHA_WIDGET_ID = grecaptcha.render("recaptchaContainer", {
+    sitekey: "6LeI5bQrAAAAAMGh1WhrRVG2pEQE1twUsfFdb_pF",
+    size: "invisible",
+    badge: "bottomright",
+    callback: function (token) {
+      if (window.__recaptchaResolve) {
+        window.__recaptchaResolve(token);
+        window.__recaptchaResolve = null;
+      }
+    },
+    "error-callback": function () {
+      if (window.__recaptchaReject) {
+        window.__recaptchaReject(new Error("reCAPTCHA failed to verify"));
+        window.__recaptchaReject = null;
+      }
+    },
+  });
+};
 
 // LOADER
 const loader = document.querySelector(".page-loader");
