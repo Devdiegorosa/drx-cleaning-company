@@ -161,7 +161,8 @@ section {
 .drx-breadcrumb {
   margin-bottom: 1.6rem;
 }
-.breadcrumb-item, .drx-breadcrumb .breadcrumb-item a {
+.breadcrumb-item,
+.drx-breadcrumb .breadcrumb-item a {
   color: var(--drx-silver);
   text-decoration: none;
   font-size: 0.8rem;
@@ -230,7 +231,7 @@ section {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.75;
-  padding:0 40px;
+  padding: 0 40px;
   margin-top: 1.4rem;
   animation: fadeUp 0.8s 0.2s ease both;
   font-weight: 300;
@@ -471,6 +472,17 @@ section {
 }
 
 /* ============================================================
+       RECAPTCHA OVERRIDE (para posicionar o badge inline e não no canto)
+    ============================================================ */
+#recaptchaContainer {
+  margin: 8px 0 12px;
+}
+
+.grecaptcha-badge {
+  transform: scale(0.75);
+  transform-origin: left center;
+}
+/* ============================================================
        FOOTER
     ============================================================ */
 footer {
@@ -498,7 +510,8 @@ footer p {
   color: rgba(255, 255, 255, 0.45);
   line-height: 1.75;
 }
-.footer-col h6, .social h6 {
+.footer-col h6,
+.social h6 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
@@ -511,7 +524,7 @@ footer p {
 .footer-col ul {
   list-style: none;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 .footer-col ul li {
   margin-bottom: 0.5rem;
@@ -537,7 +550,10 @@ footer p {
   margin-top: 1.5rem;
 }
 
-.social-icons { display: flex; gap: 0.65rem; }
+.social-icons {
+  display: flex;
+  gap: 0.65rem;
+}
 
 .social-icon-btn {
   width: 40px;
@@ -551,14 +567,41 @@ footer p {
   border: 1px solid transparent;
   transition: var(--transition);
 }
-.si-ig { background: rgba(225, 48, 108, 0.15); border-color: rgba(225, 48, 108, 0.25); color: #f4809c; }
-.si-ig:hover { background: rgba(225, 48, 108, 0.28); border-color: rgba(225, 48, 108, 0.5); color: #ffaabf; transform: translateY(-2px); }
+.si-ig {
+  background: rgba(225, 48, 108, 0.15);
+  border-color: rgba(225, 48, 108, 0.25);
+  color: #f4809c;
+}
+.si-ig:hover {
+  background: rgba(225, 48, 108, 0.28);
+  border-color: rgba(225, 48, 108, 0.5);
+  color: #ffaabf;
+  transform: translateY(-2px);
+}
 
-.si-fb { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.25); color: #74a9ff; }
-.si-fb:hover { background: rgba(24, 119, 242, 0.28); border-color: rgba(24, 119, 242, 0.5); color: #a8c8ff; transform: translateY(-2px); }
+.si-fb {
+  background: rgba(24, 119, 242, 0.15);
+  border-color: rgba(24, 119, 242, 0.25);
+  color: #74a9ff;
+}
+.si-fb:hover {
+  background: rgba(24, 119, 242, 0.28);
+  border-color: rgba(24, 119, 242, 0.5);
+  color: #a8c8ff;
+  transform: translateY(-2px);
+}
 
-.si-wa { background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.25); color: #5de08a; }
-.si-wa:hover { background: rgba(37, 211, 102, 0.28); border-color: rgba(37, 211, 102, 0.5); color: #90f0b4; transform: translateY(-2px); }
+.si-wa {
+  background: rgba(37, 211, 102, 0.15);
+  border-color: rgba(37, 211, 102, 0.25);
+  color: #5de08a;
+}
+.si-wa:hover {
+  background: rgba(37, 211, 102, 0.28);
+  border-color: rgba(37, 211, 102, 0.5);
+  color: #90f0b4;
+  transform: translateY(-2px);
+}
 
 /* ============================================================
        FLOATING CALL BUTTON (mobile)
@@ -645,7 +688,6 @@ footer p {
   }
 }
 
-
 @media (min-width: 992px) {
   .hero-sub {
     max-width: 480px;
@@ -661,12 +703,12 @@ footer p {
   .hero-trust {
     justify-content: flex-start;
   }
-  
+
   .trust-pill {
     justify-content: flex-start;
   }
 
-   .float-call {
+  .float-call {
     display: none;
   }
 }
@@ -675,10 +717,21 @@ footer p {
    PAGE HERO GLOBAL — usado em Home, Services, About e Results
    Mantém compatibilidade com os IDs atuais e também com .page-hero
 ============================================================ */
-:is(#hero, #services-hero, #about-hero, #results-hero, .page-hero, #contact-hero) {
+:is(
+  #hero,
+  #services-hero,
+  #about-hero,
+  #results-hero,
+  .page-hero,
+  #contact-hero
+) {
   min-height: auto;
   background:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(58, 110, 168, 0.18) 0%, transparent 60%),
+    radial-gradient(
+      ellipse 80% 60% at 70% 40%,
+      rgba(58, 110, 168, 0.18) 0%,
+      transparent 60%
+    ),
     linear-gradient(160deg, var(--drx-navy) 0%, var(--drx-deep) 100%);
   display: flex;
   align-items: center;
@@ -687,20 +740,38 @@ footer p {
   overflow: hidden;
 }
 
-:is(#hero, #services-hero, #about-hero, #results-hero, .page-hero, #contact-hero)::before {
+:is(
+  #hero,
+  #services-hero,
+  #about-hero,
+  #results-hero,
+  .page-hero,
+  #contact-hero
+)::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-} 
+}
 
-:is(#hero, #services-hero, #about-hero, #results-hero, .page-hero, #contact-hero)::after {
+:is(
+  #hero,
+  #services-hero,
+  #about-hero,
+  #results-hero,
+  .page-hero,
+  #contact-hero
+)::after {
   content: "";
   position: absolute;
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(58, 110, 168, 0.22) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(58, 110, 168, 0.22) 0%,
+    transparent 70%
+  );
   right: -140px;
   top: 52%;
   transform: translateY(-50%);
@@ -843,9 +914,15 @@ footer p {
   }
 }
 
-
 @media (max-width: 991.98px) {
-  :is(#hero, #services-hero, #about-hero, #results-hero, .page-hero, #contact-hero) {
+  :is(
+    #hero,
+    #services-hero,
+    #about-hero,
+    #results-hero,
+    .page-hero,
+    #contact-hero
+  ) {
     text-align: center;
   }
 
@@ -860,7 +937,14 @@ footer p {
 }
 
 @media (min-width: 768px) {
-  :is(#hero, #services-hero, #about-hero, #results-hero, .page-hero, #contact-hero) {
+  :is(
+    #hero,
+    #services-hero,
+    #about-hero,
+    #results-hero,
+    .page-hero,
+    #contact-hero
+  ) {
     min-height: 100vh;
     padding: 6rem 0 4rem;
   }
@@ -882,15 +966,21 @@ footer p {
   }
 }
 
-
 /* ============================================================
    ORGANIZATION / ACCESSIBILITY CLEANUP
 ============================================================ */
-a { text-underline-offset: 0.18em; }
-button, a { -webkit-tap-highlight-color: transparent; }
+a {
+  text-underline-offset: 0.18em;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
