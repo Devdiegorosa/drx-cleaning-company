@@ -130,6 +130,26 @@ window.onRecaptchaApiLoad = function () {
   const container = document.getElementById("recaptchaContainer");
   if (!container || !window.grecaptcha) return;
 
+  const contactSection = document.querySelector("#contact");
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      const script = document.createElement("script");
+
+      script.src =
+        "https://www.google.com/recaptcha/api.js?onload=onRecaptchaApiLoad&render=explicit";
+
+      script.async = true;
+      script.defer = true;
+
+      document.body.appendChild(script);
+
+      observer.disconnect();
+    }
+});
+
+observer.observe(contactSection);
+
   window.RECAPTCHA_WIDGET_ID = grecaptcha.render("recaptchaContainer", {
     sitekey: "6Lel5bQrAAAAAMGh1WhrRVG2pEQE1twUsfFdb_pF",
     size: "invisible",
