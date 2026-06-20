@@ -1,7 +1,7 @@
 /* Poppins Font */
 /* Fonts loaded via <link> in HTML head for better performance */
 /* ============================================================
-       DESIGN TOKENS â€” DRX Cleaning Company
+       DESIGN TOKENS — DRX Cleaning Company
        Palette pulled from the shield logo:
        Deep navy, steel blue, silver/grey, white accents
     ============================================================ */
@@ -243,9 +243,10 @@ section {
 .hero-btns {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: center;
-  gap: 0.9rem;
+  gap: 0.8rem;
   margin-top: 2.2rem;
   animation: fadeUp 0.8s 0.3s ease both;
 }
@@ -301,8 +302,8 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 3rem;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
   animation: fadeUp 0.8s 0.4s ease both;
 }
 .trust-pill {
@@ -313,8 +314,6 @@ section {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
-  margin-left: 0.5rem;
-  gap: 0.5rem;
   margin-left: 0.5rem;
   gap: 0.5rem;
 }
@@ -799,27 +798,9 @@ footer p {
   animation: fadeUp 0.9s 0.25s ease both;
 }
 
-.hero-btns {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  gap: 0.8rem;
-  animation: fadeUp 0.8s 0.3s ease both;
-}
-
 .hero-btns > a,
 .hero-btns > button {
   justify-content: center;
-}
-
-.hero-trust {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.6rem;
-  animation: fadeUp 0.8s 0.4s ease both;
 }
 
 /* Text helpers para substituir style="..." no HTML */
