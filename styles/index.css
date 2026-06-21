@@ -499,3 +499,52 @@
     height: 260px;
   }
 }
+
+/* ============================================================
+       INTRO SECTION (texto institucional)
+    ============================================================ */
+#intro {
+  background: var(--drx-white);
+}
+.intro-lead {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #42536a;
+  margin-bottom: 1.1rem;
+}
+
+/* ============================================================
+       FAQ SECTION
+    ============================================================ */
+#home-faq {
+  background: #f0f5fa;
+}
+.drx-accordion .accordion-item {
+  border: 1px solid rgba(13, 27, 46, 0.08);
+  border-radius: 10px !important;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.drx-accordion .accordion-button {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--drx-navy);
+  background: #fff;
+  padding: 1.2rem 1.4rem;
+  box-shadow: none !important;
+}
+.drx-accordion .accordion-button:not(.collapsed) {
+  color: var(--drx-blue);
+  background: #fff;
+}
+.drx-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233a6ea8'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.drx-accordion .accordion-body {
+  font-size: 0.9rem;
+  color: #5a6a7e;
+  line-height: 1.8;
+  background: #fff;
+  padding: 0 1.4rem 1.4rem;
+}

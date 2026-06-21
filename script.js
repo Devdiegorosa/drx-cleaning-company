@@ -159,3 +159,39 @@ window.addEventListener("load", () => {
     loader.classList.add("hide-loader");
   }, 900);
 });
+
+// ── HERO VIDEO — desktop/tablet only ──
+// Mobile users keep just the static poster image: no video bytes are
+// downloaded at all, which is the single biggest weight saver on mobile
+// (the four <source> variants together were ~7MB on a single page load).
+(() => {
+  const heroVideo = document.querySelector(".hero-video");
+  if (!heroVideo) return;
+
+  const MOBILE_BREAKPOINT = 768;
+
+  const maybeLoadVideo = () => {
+    if (window.innerWidth < MOBILE_BREAKPOINT) return;
+    if (heroVideo.dataset.loaded === "true") return;
+
+    heroVideo.dataset.loaded = "true";
+    heroVideo.preload = "auto";
+    heroVideo.setAttribute("autoplay", "");
+    heroVideo.load();
+    heroVideo.play().catch(() => {
+      /* Autoplay can be blocked by the browser; the poster stays visible. */
+    });
+  };
+
+  maybeLoadVideo();
+
+  let resizeTimer;
+  window.addEventListener(
+    "resize",
+    () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(maybeLoadVideo, 200);
+    },
+    { passive: true },
+  );
+})();
