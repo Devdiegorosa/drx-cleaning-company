@@ -1,8 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-/* DRX Cleaning Company — Safe front-end interactions + backend quote form */
+  /* DRX Cleaning Company — Safe front-end interactions + backend quote form */
+
+  // Lazy load reCAPTCHA only when user interacts with the form
+  let recaptchaLoaded = false;
+
+  function loadRecaptcha() {
+    if (recaptchaLoaded) return;
+
+    recaptchaLoaded = true;
+
+    const script = document.createElement("script");
+    script.src =
+      "https://www.google.com/recaptcha/api.js?onload=onRecaptchaApiLoad&render=explicit";
+    script.async = true;
+    script.defer = true;
+
+    document.body.appendChild(script);
+  }
+
   (() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
+      "(prefers-reduced-motion: reduce)"
     ).matches;
 
     const revealElements = document.querySelectorAll(".reveal");
@@ -17,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           });
         },
-        { threshold: 0.12 },
+        { threshold: 0.12 }
       );
 
       revealElements.forEach((el) => observer.observe(el));
@@ -34,15 +52,21 @@ document.addEventListener("DOMContentLoaded", () => {
           mainNav.style.boxShadow =
             window.scrollY > 60 ? "0 4px 30px rgba(0,0,0,0.35)" : "none";
         },
-        { passive: true },
+        { passive: true }
       );
     }
 
     const quoteForm = document.getElementById("quoteForm");
 
     if (quoteForm) {
+      quoteForm.addEventListener("focusin", loadRecaptcha, {
+        once: true,
+      });
+
       quoteForm.addEventListener("submit", async function (event) {
         event.preventDefault();
+
+        loadRecaptcha();
 
         const btn = document.getElementById("submitBtn");
         if (!btn) return;
@@ -58,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i> Sending...';
 
         try {
-          // ── reCAPTCHA Invisible v2 — generate token before submitting ──
           let recaptchaToken = "";
 
           if (
@@ -66,14 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
             typeof grecaptcha.execute === "function" &&
             window.RECAPTCHA_WIDGET_ID !== undefined
           ) {
-            // Reset any previous token, then execute the invisible challenge
             grecaptcha.reset(window.RECAPTCHA_WIDGET_ID);
+
             recaptchaToken = await new Promise((resolve, reject) => {
               try {
-                grecaptcha.execute(window.RECAPTCHA_WIDGET_ID);
-                // The callback set in data-callback resolves this promise
                 window.__recaptchaResolve = resolve;
                 window.__recaptchaReject = reject;
+                grecaptcha.execute(window.RECAPTCHA_WIDGET_ID);
               } catch (err) {
                 reject(err);
               }
@@ -94,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify(payload),
-            },
+            }
           );
 
           const result = await response.json().catch(() => ({}));
@@ -111,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
           btn.style.background = "linear-gradient(135deg,#1a7a45,#22a05a)";
 
           quoteForm.reset();
+
           if (window.grecaptcha && window.RECAPTCHA_WIDGET_ID !== undefined) {
             grecaptcha.reset(window.RECAPTCHA_WIDGET_ID);
           }
@@ -130,6 +153,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.onRecaptchaApiLoad = function () {
     const container = document.getElementById("recaptchaContainer");
     if (!container || !window.grecaptcha) return;
+
+    if (window.RECAPTCHA_WIDGET_ID !== undefined) return;
 
     window.RECAPTCHA_WIDGET_ID = grecaptcha.render("recaptchaContainer", {
       sitekey: "6Lel5bQrAAAAAMGh1WhrRVG2pEQE1twUsfFdb_pF",
@@ -158,42 +183,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       loader.classList.add("hide-loader");
-    }, 900);
+    }, 200);
   });
 
-  // ── HERO VIDEO — desktop/tablet only ──
-  // Mobile users keep just the static poster image: no video bytes are
-  // downloaded at all, which is the single biggest weight saver on mobile
-  // (the four <source> variants together were ~7MB on a single page load).
-  (() => {
+  // HERO VIDEO — desktop/tablet only
+  window.addEventListener("load", () => {
     const heroVideo = document.querySelector(".hero-video");
     if (!heroVideo) return;
 
-    const MOBILE_BREAKPOINT = 768;
+    if (window.innerWidth < 768) {
+      return;
+    }
 
-    const maybeLoadVideo = () => {
-      if (window.innerWidth < MOBILE_BREAKPOINT) return;
-      if (heroVideo.dataset.loaded === "true") return;
+    if (heroVideo.dataset.loaded === "true") {
+      return;
+    }
 
-      heroVideo.dataset.loaded = "true";
-      heroVideo.preload = "auto";
-      heroVideo.setAttribute("autoplay", "");
-      heroVideo.load();
-      heroVideo.play().catch(() => {
-        /* Autoplay can be blocked by the browser; the poster stays visible. */
-      });
-    };
+    heroVideo.dataset.loaded = "true";
 
-    maybeLoadVideo();
+    const source = document.createElement("source");
 
-    let resizeTimer;
-    window.addEventListener(
-      "resize",
-      () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(maybeLoadVideo, 200);
-      },
-      { passive: true },
-    );
-  })();
+    if (window.innerWidth <= 992) {
+      source.src = "videos/cleaning-hero-tablet.webm";
+    } else {
+      source.src = "videos/cleaning-hero.webm";
+    }
+
+    source.type = "video/webm";
+
+    heroVideo.appendChild(source);
+    heroVideo.preload = "auto";
+    heroVideo.autoplay = true;
+
+    heroVideo.load();
+    heroVideo.play().catch(() => {});
+  });
 });
