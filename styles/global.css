@@ -1,7 +1,7 @@
 /* Poppins Font */
 /* Fonts loaded via <link> in HTML head for better performance */
 /* ============================================================
-       DESIGN TOKENS — DRX Cleaning Company
+       DESIGN TOKENS â€” DRX Cleaning Company
        Palette pulled from the shield logo:
        Deep navy, steel blue, silver/grey, white accents
     ============================================================ */
@@ -243,10 +243,9 @@ section {
 .hero-btns {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.9rem;
   margin-top: 2.2rem;
   animation: fadeUp 0.8s 0.3s ease both;
 }
@@ -302,8 +301,8 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.6rem;
+  gap: 1rem;
+  margin-top: 3rem;
   animation: fadeUp 0.8s 0.4s ease both;
 }
 .trust-pill {
@@ -314,6 +313,8 @@ section {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
+  margin-left: 0.5rem;
+  gap: 0.5rem;
   margin-left: 0.5rem;
   gap: 0.5rem;
 }
@@ -798,9 +799,27 @@ footer p {
   animation: fadeUp 0.9s 0.25s ease both;
 }
 
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.8rem;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
 .hero-btns > a,
 .hero-btns > button {
   justify-content: center;
+}
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+  animation: fadeUp 0.8s 0.4s ease both;
 }
 
 /* Text helpers para substituir style="..." no HTML */
@@ -967,4 +986,54 @@ a {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ============================================================
+   SMS CONSENT CHECKBOX
+============================================================ */
+.sms-consent-wrap { margin-bottom: 0.25rem; }
+
+.sms-consent-box {
+  background: #f0f5fa;
+  border: 1.5px solid rgba(58, 110, 168, 0.2);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+}
+
+.sms-consent-label {
+  font-size: 0.3rem;
+  color: #42536a;
+  line-height: 1.65;
+  cursor: pointer;
+}
+
+.sms-consent-label a {
+  color: var(--drx-blue);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.sms-consent-label a:hover { color: var(--drx-steel); }
+
+.sms-consent-error {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+  padding: 0.45rem 0.75rem;
+  background: rgba(220, 38, 38, 0.07);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  border-radius: 6px;
+  font-size: 0.3rem;
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.sms-consent-error.visible {
+  display: flex;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(58, 110, 168, 0.18);
+  border-color: var(--drx-blue);
 }
