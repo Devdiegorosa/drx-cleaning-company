@@ -82,6 +82,25 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i> Sending...';
 
         try {
+          // ── SMS Consent validation ──
+          const SMS_CONSENT_TEXT =
+            "I agree to receive appointment reminders and service-related SMS " +
+            "messages from DRX Cleaning Company. Message frequency varies. " +
+            "Message and data rates may apply. Reply STOP to opt out and HELP for help.";
+
+          const smsCheck = document.getElementById("smsConsentCheck");
+          const smsError = document.getElementById("smsConsentError");
+
+          if (smsCheck && !smsCheck.checked) {
+            if (smsError) smsError.classList.add("visible");
+            smsCheck.scrollIntoView({ behavior: "smooth", block: "center" });
+            smsCheck.focus();
+            btn.disabled = false;
+            btn.innerHTML = originalHtml;
+            return;
+          }
+          if (smsError) smsError.classList.remove("visible");
+
           let recaptchaToken = "";
 
           if (
@@ -105,8 +124,15 @@ document.addEventListener("DOMContentLoaded", () => {
           const formData = new FormData(quoteForm);
           const payload = Object.fromEntries(formData.entries());
 
-          payload.page = window.location.href;
-          payload.recaptchaToken = recaptchaToken;
+          payload.page             = window.location.href;
+          payload.recaptchaToken   = recaptchaToken;
+
+          // ── SMS Consent fields (sent with every lead) ──
+          payload.smsConsent          = smsCheck ? smsCheck.checked : false;
+          payload.smsConsentMethod    = "web_form";
+          payload.smsConsentSource    = "website";
+          payload.smsConsentTimestamp = new Date().toISOString();
+          payload.consentTextVersion  = SMS_CONSENT_TEXT;
 
           const response = await fetch(
             "https://drx-cleaning-backend.vercel.app/api/quote",
