@@ -1376,6 +1376,33 @@
                       placeholder="Tell us about your Celebration home, square footage, stain type, or preferred date..."
                     ></textarea>
                   </div>
+                  <div class="col-12 sms-consent-wrap">
+                    <div class="sms-consent-box">
+                      <div class="form-check align-items-start">
+                        <input
+                          class="form-check-input mt-1"
+                          type="checkbox"
+                          name="smsConsent"
+                          id="smsConsentCheck"
+                          required
+                          aria-required="true"
+                        />
+                        <label class="form-check-label sms-consent-label" for="smsConsentCheck">
+                          I agree to receive appointment reminders and service-related SMS
+                          messages from DRX Cleaning Company. Message frequency varies.
+                          Message and data rates may apply. Reply STOP to opt out and
+                          HELP for help. View our
+                          <a href="https://www.drxcleaning.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+                          and
+                          <a href="https://www.drxcleaning.com/terms" target="_blank" rel="noopener">Terms &amp; Conditions</a>.
+                        </label>
+                      </div>
+                      <div class="sms-consent-error" id="smsConsentError" aria-live="polite">
+                        <i class="bi bi-exclamation-circle-fill"></i>
+                        Please agree to receive SMS messages to submit this form.
+                      </div>
+                    </div>
+                  </div>
                   <div id="recaptchaContainer"></div>
                   <div class="col-12">
                     <button type="submit" class="btn-submit" id="submitBtn">
